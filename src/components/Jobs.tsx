@@ -32,7 +32,7 @@ export const Jobs = () => {
   };
 
   return (
-    <div className="flex gap-4 w-full p-2">
+    <div className="md:flex  gap-4 p-2 ">
       <div className="w-[32rem] py-5">
         <Timeline>
           {JOBS.map((job, index) => (
