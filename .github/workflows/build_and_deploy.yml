@@ -15,8 +15,8 @@ jobs:
         uses: appleboy/ssh-action@v1
         with:
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
+          username: root
+          password: ${{ secrets.PASSWORD }}
           script: |
             cd ~/Portfolio/Frontend/
             git checkout main
