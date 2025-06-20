@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Build with ssh
 
 on:
   push:
@@ -17,4 +17,6 @@ jobs:
           host: ${{ secrets.HOST }}
           username: root
           password: ${{ secrets.PASSWORD }}
-          script: master/scripts/build.sh
+          script: |
+            ls -lah  
+            ../../scripts/build.sh
