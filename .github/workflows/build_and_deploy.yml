@@ -16,7 +16,7 @@ jobs:
         with:
           host: ${{ secrets.HOST }}
           username: root
-          password: ${{ secrets.PASSWORD }}
+          key: ${{ secrets.KEY }}
           script: |
             cd ~/Portfolio/Frontend/
             git checkout main
