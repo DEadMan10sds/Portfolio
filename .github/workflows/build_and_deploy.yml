@@ -17,4 +17,4 @@ jobs:
           host: ${{ secrets.HOST }}
           username: root
           password: ${{ secrets.PASSWORD }}
-          script: whoami
+          script: scripts/build.sh
