@@ -19,4 +19,4 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             ls -lah  
-            ../../scripts/build.sh
+            ./Portfolio/Frontend/scripts/build.sh
