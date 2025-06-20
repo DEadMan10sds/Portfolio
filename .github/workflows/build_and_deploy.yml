@@ -1,0 +1,20 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Turn off current Docker container
+        run: docker compose down
+      - name: Build and deploy with new docker container
+        run: docker compose up -d --build
+      - name: Clean all unnecesary docker data
+        run: docker system prune -a
