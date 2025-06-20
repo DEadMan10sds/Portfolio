@@ -19,7 +19,7 @@ jobs:
           password: ${{ secrets.PASSWORD }}
           script: |
             ls -lah
-            cd ~/Portfolio/Frontend/scripts/build.sh
+            cd ~/Portfolio/Frontend/
             git checkout main
             docker compose down
             docker compose up -d --build
