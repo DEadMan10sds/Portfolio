@@ -2,6 +2,7 @@
   "translation": {
     "home": "Home",
     "languages": {
+      "title": "Language",
       "es": "Spanish",
       "en": "English"
     }
