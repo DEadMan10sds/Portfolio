@@ -18,5 +18,7 @@ jobs:
           username: root
           password: ${{ secrets.PASSWORD }}
           script: |
-            ls -lah  
-            ./Portfolio/Frontend/scripts/build.sh
+            cd ./Portfolio/Frontend/scripts/build.sh
+            git checkout main
+            docker compose down
+            docker compose up -d --build
