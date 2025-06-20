@@ -1,17 +1,12 @@
-import { useState } from "react";
-import { Button } from "@material-tailwind/react";
-import { StickyNavbar } from "./components/StickyNavbar";
+import { StickyNavbar, MainInfo, Jobs } from "./components";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <StickyNavbar />
-      <div className="p-5">
-        <Button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </Button>
+      <div className="py-5 max-w-[80%] m-auto">
+        <MainInfo />
+        <Jobs />
       </div>
     </>
   );

@@ -3,7 +3,6 @@ import {
   Navbar,
   Collapse,
   Typography,
-  Button,
   IconButton,
 } from "@material-tailwind/react";
 import { useTranslation } from "react-i18next";
