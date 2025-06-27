@@ -6,16 +6,11 @@ import {
   TimelineIcon,
   TimelineBody,
   Typography,
-  Card,
-  CardBody,
 } from "@material-tailwind/react";
 import { useState } from "react";
+import type JobInterface from "../interfaces/Job";
+import { JobCard } from "./JobCard";
 
-interface JobInterface {
-  company: string;
-  time?: string;
-  shortDescription?: string;
-}
 
 const JOBS: JobInterface[] = [
   { company: "Bitcat" },
@@ -64,9 +59,7 @@ export const Jobs = () => {
           ))}
         </Timeline>
       </div>
-      <Card className="w-full border border-solid border-black" shadow={false}>
-        <CardBody>{JOBS[company].company}</CardBody>
-      </Card>
+      <JobCard job={JOBS[company]} />
     </div>
   );
 };
