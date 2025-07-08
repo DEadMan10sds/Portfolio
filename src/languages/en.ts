@@ -12,6 +12,15 @@ const enTranslation = {
       description:
         "I'm a fullstack web semi senior developer, I'm now focused on backend systems with NodeJs and NestJs",
     },
+    jobs: {
+      Bitcat: {
+        comany: "Bitcat Services ",
+        description: "Bitcat Description",
+        title: "Javascript Web Developer",
+        start: "May 2024",
+        end: "Current day",
+      },
+    },
   },
 };
 

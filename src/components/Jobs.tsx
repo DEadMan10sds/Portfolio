@@ -8,18 +8,20 @@ import {
   Typography,
 } from "@material-tailwind/react";
 import { useState } from "react";
-import type JobInterface from "../interfaces/Job";
+//import type JobInterface from "../interfaces/Job";
 import { JobCard } from "./JobCard";
+import { useTranslation } from "react-i18next";
+import JOBS from "../constants/Jobs";
 
-
-const JOBS: JobInterface[] = [
-  { company: "Bitcat" },
-  { company: "Cooperative Computing" },
-  { company: "AIA Partners" },
-  { company: "UASLP" },
-];
+// const JOBS: JobInterface[] = [
+//   { company: "Bitcat" },
+//   { company: "Cooperative Computing" },
+//   { company: "AIA Partners" },
+//   { company: "UASLP" },
+// ];
 
 export const Jobs = () => {
+  const { t } = useTranslation();
   const [company, setCompany] = useState<number>(0);
 
   const handleSelectCompany = (selectedCompany: number = 0) => {
@@ -31,7 +33,7 @@ export const Jobs = () => {
       <div className="w-[32rem] py-5">
         <Timeline>
           {JOBS.map((job, index) => (
-            <TimelineItem key={job.company}>
+            <TimelineItem key={job}>
               {index !== JOBS.length - 1 && <TimelineConnector />}
               <TimelineHeader
                 className="h-3 cursor-pointer"
@@ -43,7 +45,7 @@ export const Jobs = () => {
                   color="blue-gray"
                   className="leading-none"
                 >
-                  {job.company}
+                  {job}
                 </Typography>
               </TimelineHeader>
               <TimelineBody className="pb-8">
@@ -52,7 +54,9 @@ export const Jobs = () => {
                   color="gray"
                   className="font-normal text-gray-600"
                 >
-                  Short description
+                  {t(`jobs.${job}.description`, {
+                    defaultValue: "Not found",
+                  })}
                 </Typography>
               </TimelineBody>
             </TimelineItem>
