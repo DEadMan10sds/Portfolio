@@ -10,7 +10,7 @@ const esTranslation = {
       career: "Ingeniero en Sistemas Inteligentes",
       university: "UASLP",
       description:
-        "Soy desarrollador web fullstack semi senior, principalmente desarrollo backends tanto en NodeJs como en NestJs ",
+        "Soy desarrollador web fullstack semi senior, principalmente desarrollo backends tanto en NodeJs como en NestJs con integraciones en PostgreSQL y MongoDB, además de configurar despliegues y hostings usando Nginx, me apasiona el desarrollo de videojuegos y ciberseguridad.",
     },
     jobs: {
       "Bitcat Services": {
