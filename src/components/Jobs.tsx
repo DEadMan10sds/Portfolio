@@ -11,7 +11,6 @@ import { useState } from "react";
 //import type JobInterface from "../interfaces/Job";
 import { JobCard } from "./JobCard";
 import { useTranslation } from "react-i18next";
-import JOBS from "../constants/Jobs";
 
 // const JOBS: JobInterface[] = [
 //   { company: "Bitcat" },
@@ -23,7 +22,7 @@ import JOBS from "../constants/Jobs";
 export const Jobs = () => {
   const { t } = useTranslation();
   const [company, setCompany] = useState<number>(0);
-
+  const JOBS_KEYS = Object.keys(t("jobs", { returnObjects: true }));
   const handleSelectCompany = (selectedCompany: number = 0) => {
     return () => setCompany(selectedCompany);
   };
@@ -32,9 +31,9 @@ export const Jobs = () => {
     <div className="md:flex  gap-4 p-2 ">
       <div className="w-[32rem] py-5">
         <Timeline>
-          {JOBS.map((job, index) => (
+          {JOBS_KEYS.map((job, index) => (
             <TimelineItem key={job}>
-              {index !== JOBS.length - 1 && <TimelineConnector />}
+              {index !== JOBS_KEYS.length - 1 && <TimelineConnector />}
               <TimelineHeader
                 className="h-3 cursor-pointer"
                 onClick={handleSelectCompany(index)}
@@ -54,16 +53,16 @@ export const Jobs = () => {
                   color="gray"
                   className="font-normal text-gray-600"
                 >
-                  {t(`jobs.${job}.description`, {
-                    defaultValue: "Not found",
-                  })}
+                  {t(`jobs.${job}.start`)}
+                  <span> - </span>
+                  {t(`jobs.${job}.end`)}
                 </Typography>
               </TimelineBody>
             </TimelineItem>
           ))}
         </Timeline>
       </div>
-      <JobCard job={JOBS[company]} />
+      <JobCard job={JOBS_KEYS[company]} />
     </div>
   );
 };

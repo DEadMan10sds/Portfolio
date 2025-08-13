@@ -14,11 +14,25 @@ const enTranslation = {
     },
     jobs: {
       Bitcat: {
-        comany: "Bitcat Services ",
+        company: "Bitcat Services ",
         description: "Bitcat Description",
         title: "Javascript Web Developer",
         start: "May 2024",
         end: "Current day",
+      },
+      "Cooperative Computing": {
+        company: "Cooperative Computing",
+        description: "Desarrollador web fullstack de sistemas internos",
+        title: "Fullstack developer",
+        start: "September 2023",
+        end: "May 2024",
+      },
+      "AIA Partners": {
+        company: "AIA Partners",
+        description: "Desarrollador web fullstack de sistemas internos",
+        title: "Backend development leader",
+        start: "June 2022",
+        end: "September 2023",
       },
     },
   },

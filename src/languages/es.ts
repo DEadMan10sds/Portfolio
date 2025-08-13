@@ -13,12 +13,30 @@ const esTranslation = {
         "Soy desarrollador web fullstack semi senior, principalmente desarrollo backends tanto en NodeJs como en NestJs ",
     },
     jobs: {
-      Bitcat: {
-        comany: "Bitcat Services",
-        description: "Descripción de Bitcat",
+      "Bitcat Services": {
+        description:
+          "Desarrollador web de javascript y sistemas de monitoreo con conexión a PLC's",
         title: "Desarrollador Web Javascript",
         start: "Mayo 2024",
         end: "Actualidad",
+      },
+      "Cooperative Computing": {
+        description: "Desarrollador web fullstack de sistemas internos",
+        title: "Desarrollador fullstack",
+        start: "Septiembre 2023",
+        end: "Mayo 2024",
+      },
+      "AIA Partners": {
+        description: "Desarrollador web fullstack de sistemas internos",
+        title: "Encargado de desarrollo backend",
+        start: "Junio 2022",
+        end: "Septiembre 2023",
+      },
+      UASLP: {
+        description: "Desarrollador web fullstack de sistemas internos",
+        title: "Encargado de desarrollo backend",
+        start: "Junio 2022",
+        end: "Septiembre 2023",
       },
     },
   },
