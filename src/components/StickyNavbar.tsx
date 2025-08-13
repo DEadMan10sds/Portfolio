@@ -42,7 +42,7 @@ export function StickyNavbar() {
         >
           Adán Sánchez
         </Typography>
-        <div className="mr-4 hidden lg:block">{navList}</div>
+        {/* <div className="mr-4 hidden lg:block">{navList}</div> */}
         <div className="hidden lg:block">
           <ChangeLanguage />
         </div>

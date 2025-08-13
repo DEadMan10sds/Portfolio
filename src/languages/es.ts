@@ -27,14 +27,16 @@ const esTranslation = {
         end: "Mayo 2024",
       },
       "AIA Partners": {
-        description: "Desarrollador web fullstack de sistemas internos",
+        description: "Desarrollo de backend para plataformas financieras",
         title: "Encargado de desarrollo backend",
         start: "Junio 2022",
         end: "Septiembre 2023",
+        activities: ["Despliegue de sistemas backend"],
       },
       UASLP: {
-        description: "Desarrollador web fullstack de sistemas internos",
-        title: "Encargado de desarrollo backend",
+        description:
+          "Encargado de mantenimiento a equipos de computación e instalación de programas",
+        title: "Becario",
         start: "Junio 2022",
         end: "Septiembre 2023",
       },
