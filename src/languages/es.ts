@@ -31,7 +31,12 @@ const esTranslation = {
         title: "Encargado de desarrollo backend",
         start: "Junio 2022",
         end: "Septiembre 2023",
-        activities: ["Despliegue de sistemas backend"],
+        activities: [
+          "Despliegue de sistemas backend",
+          "Mantenimiento de bases de datos",
+          "Encriptado de archivos en Bases de Datos",
+          "Configuración de CronJobs",
+        ],
       },
       UASLP: {
         description:
