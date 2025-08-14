@@ -13,7 +13,6 @@ const esTranslation = {
         "Egresado de la UASLP, me convertí en desarrollador web fullstack semi senior, principalmente desarrollo backends tanto en NodeJs como en NestJs con integraciones en PostgreSQL y MongoDB, además de configurar despliegues y hostings usando Nginx, me apasiona el desarrollo de videojuegos y ciberseguridad.",
     },
     job_history: "Historial laboral",
-    skills: "Habilidades",
     jobs: {
       "Bitcat Services": {
         description:
@@ -88,6 +87,19 @@ const esTranslation = {
           "Desarrollo de funcionalidades en Js para manejo de Interfaz de usuario e interacciones con el entorno",
         ],
       },
+    },
+    skills: "Habilidades",
+    skillsSet: {
+      "Lenguajes de programación": [
+        {
+          img: "",
+          title: "React",
+          time: "1 año",
+        },
+      ],
+      "Frameworks y librerías": [],
+      "Bases de datos": [],
+      Herramientas: [],
     },
   },
 };
