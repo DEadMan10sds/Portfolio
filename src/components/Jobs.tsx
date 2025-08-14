@@ -1,23 +1,15 @@
 import {
   Timeline,
+  Typography,
   TimelineItem,
-  TimelineConnector,
-  TimelineHeader,
   TimelineIcon,
   TimelineBody,
-  Typography,
+  TimelineHeader,
+  TimelineConnector,
 } from "@material-tailwind/react";
 import { useState } from "react";
-//import type JobInterface from "../interfaces/Job";
 import { JobCard } from "./JobCard";
 import { useTranslation } from "react-i18next";
-
-// const JOBS: JobInterface[] = [
-//   { company: "Bitcat" },
-//   { company: "Cooperative Computing" },
-//   { company: "AIA Partners" },
-//   { company: "UASLP" },
-// ];
 
 export const Jobs = () => {
   const { t } = useTranslation();
