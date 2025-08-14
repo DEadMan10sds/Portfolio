@@ -12,6 +12,7 @@ const enTranslation = {
       description:
         "I'm a fullstack web semi senior developer, I'm now focused on backend systems with NodeJs and NestJs",
     },
+    job_history: "Job History",
     jobs: {
       "Bitcat Services": {
         description: "Bitcat Description",
