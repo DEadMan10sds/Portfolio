@@ -28,8 +28,8 @@ export const Jobs = () => {
   };
 
   return (
-    <div className="md:grid sm:flex sm:flex-col md:grid-cols-2 gap-4 p-2 ">
-      <Timeline className="pl-5 pt-6">
+    <div className="md:grid sm:flex sm:flex-col md:grid-cols-2 gap-4">
+      <Timeline className="pl-5 pt-3">
         {JOBS_KEYS.map((job, index) => (
           <TimelineItem key={job}>
             {index !== JOBS_KEYS.length - 1 && <TimelineConnector />}
