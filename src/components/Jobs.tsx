@@ -28,40 +28,39 @@ export const Jobs = () => {
   };
 
   return (
-    <div className="md:flex  gap-4 p-2 ">
-      <div className="w-[32rem] py-5">
-        <Timeline>
-          {JOBS_KEYS.map((job, index) => (
-            <TimelineItem key={job}>
-              {index !== JOBS_KEYS.length - 1 && <TimelineConnector />}
-              <TimelineHeader
-                className="h-3 cursor-pointer"
-                onClick={handleSelectCompany(index)}
+    <div className="md:grid sm:flex sm:flex-col md:grid-cols-2 gap-4 p-2 ">
+      <Timeline className="pl-5 pt-6">
+        {JOBS_KEYS.map((job, index) => (
+          <TimelineItem key={job}>
+            {index !== JOBS_KEYS.length - 1 && <TimelineConnector />}
+            <TimelineHeader
+              className="h-3 cursor-pointer w-fit"
+              onClick={handleSelectCompany(index)}
+            >
+              <TimelineIcon />
+              <Typography
+                variant="h6"
+                color="blue-gray"
+                className="leading-none"
               >
-                <TimelineIcon />
-                <Typography
-                  variant="h6"
-                  color="blue-gray"
-                  className="leading-none"
-                >
-                  {job}
-                </Typography>
-              </TimelineHeader>
-              <TimelineBody className="pb-8">
-                <Typography
-                  variant="small"
-                  color="gray"
-                  className="font-normal text-gray-600"
-                >
-                  {t(`jobs.${job}.start`)}
-                  <span> - </span>
-                  {t(`jobs.${job}.end`)}
-                </Typography>
-              </TimelineBody>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </div>
+                {job}
+              </Typography>
+            </TimelineHeader>
+            <TimelineBody className="pb-8">
+              <Typography
+                variant="small"
+                color="gray"
+                className="font-normal text-gray-600"
+              >
+                {t(`jobs.${job}.start`)}
+                <span> - </span>
+                {t(`jobs.${job}.end`)}
+              </Typography>
+            </TimelineBody>
+          </TimelineItem>
+        ))}
+      </Timeline>
+
       <JobCard job={JOBS_KEYS[company]} />
     </div>
   );

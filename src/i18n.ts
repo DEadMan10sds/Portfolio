@@ -9,5 +9,5 @@ i18n.use(initReactI18next).init({
     en: enTranslation,
   },
 
-  lng: "en",
+  lng: "es",
 });

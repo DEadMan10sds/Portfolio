@@ -7,19 +7,23 @@ export const JobCard = ({ job }: { job: string }) => {
     returnObjects: true,
   });
   return (
-    <Card className="w-full">
+    <Card className="w-full h-fit">
       <CardBody>
-        <Typography variant="h4">{t(`jobs.${job}.title`)}</Typography>
+        <Typography variant="lead" className="font-bold">
+          {t(`jobs.${job}.title`)}
+        </Typography>
+        <Typography variant="paragraph">
+          {t(`jobs.${job}.description`)}
+        </Typography>
+
         {Array.isArray(JOB_ACTIVITIES) && (
-          <>
-            <ul className="ml-6">
-              {JOB_ACTIVITIES.map((activity, index: number) => (
-                <li key={`${job}_activity_${index}`} className="list-disc">
-                  {activity}
-                </li>
-              ))}
-            </ul>
-          </>
+          <ul className="ml-6">
+            {JOB_ACTIVITIES.map((activity, index: number) => (
+              <li key={`${job}_activity_${index}`} className="list-disc">
+                <Typography variant="small">{activity}</Typography>
+              </li>
+            ))}
+          </ul>
         )}
       </CardBody>
     </Card>

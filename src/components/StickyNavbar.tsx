@@ -8,6 +8,17 @@ import {
 import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
 
+const links = [
+  {
+    url: "https://www.linkedin.com/in/ad%C3%A1n-alejandro-s%C3%A1nchez/",
+    text: "LinkedIn",
+  },
+  {
+    url: "https://github.com/DEadMan10sds",
+    text: "Github",
+  },
+];
+
 export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
   const { t } = useTranslation();
@@ -21,14 +32,22 @@ export function StickyNavbar() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography
-        as="li"
-        variant="small"
-        color="blue-gray"
-        className="p-1 font-normal"
-      >
-        <p className="flex items-center text-md font-semibold">{t("home")}</p>
-      </Typography>
+      {links.map((link) => (
+        <Typography
+          key={link.url}
+          as="li"
+          color="blue-gray"
+          className="p-1 font-normal"
+        >
+          <a
+            href={link.url}
+            className="flex items-center text-md font-semibold"
+          >
+            {link.text}
+            {/* {t("home")} */}
+          </a>
+        </Typography>
+      ))}
     </ul>
   );
 
@@ -42,7 +61,7 @@ export function StickyNavbar() {
         >
           Adán Sánchez
         </Typography>
-        {/* <div className="mr-4 hidden lg:block">{navList}</div> */}
+        <div className="mr-4 hidden lg:block">{navList}</div>
         <div className="hidden lg:block">
           <ChangeLanguage />
         </div>
