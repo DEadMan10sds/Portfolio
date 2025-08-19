@@ -5,7 +5,7 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-import { useTranslation } from "react-i18next";
+//import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
 
 const links = [
@@ -21,7 +21,7 @@ const links = [
 
 export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
-  const { t } = useTranslation();
+  //const { t } = useTranslation();
 
   useEffect(() => {
     window.addEventListener(
