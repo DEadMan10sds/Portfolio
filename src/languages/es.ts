@@ -101,6 +101,11 @@ const esTranslation = {
           title: "React",
           time: "1 año",
         },
+        {
+          img: "",
+          title: "NodeJs",
+          time: "3 año",
+        },
       ],
       "Frameworks y librerías": [],
       "Bases de datos": [],
