@@ -31,7 +31,11 @@ export const TabsContent = () => {
           console.log({ skill });
 
           return (
-            <TabPanel key={skill} value={skill}>
+            <TabPanel
+              key={skill}
+              value={skill}
+              className="grid gap-4 sm:grid-cols-1 md:grid-cols-4"
+            >
               {skillSet[skill].map((currentSkill: Skill) => (
                 <SkillCard
                   key={`${currentSkill.title}-${currentSkill.time}`}
