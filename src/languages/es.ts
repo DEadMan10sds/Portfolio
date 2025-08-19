@@ -92,17 +92,17 @@ const esTranslation = {
     skillsSet: {
       "Lenguajes de programación": [
         {
-          img: "react.svg",
+          img: "docker.svg",
           title: "Docker",
           time: "1 año",
         },
         {
-          img: "",
+          img: "react.svg",
           title: "React",
           time: "1 año",
         },
         {
-          img: "",
+          img: "node.svg",
           title: "NodeJs",
           time: "3 año",
         },

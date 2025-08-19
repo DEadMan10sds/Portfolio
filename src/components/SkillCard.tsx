@@ -6,7 +6,11 @@ export const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
     <Card>
       <CardBody>
-        <img src={skill.img} />
+        <img
+          src={skill.img}
+          alt={`${skill.title}-logo`}
+          className="m-auto w-24"
+        />
         <Typography variant="h5" color="blue-gray">
           {skill.title}
         </Typography>
