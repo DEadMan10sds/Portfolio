@@ -4,15 +4,10 @@ import {
   TabsBody,
   Tab,
   TabPanel,
-  Typography,
 } from "@material-tailwind/react";
 import { useTranslation } from "react-i18next";
-
-interface Skill {
-  img: string;
-  title: string;
-  time: string;
-}
+import type Skill from "../interfaces/Skill";
+import { SkillCard } from "./SkillCard";
 
 export const TabsContent = () => {
   const { t } = useTranslation();
@@ -37,10 +32,11 @@ export const TabsContent = () => {
 
           return (
             <TabPanel key={skill} value={skill}>
-              {skillSet[skill].map(({ img, title, time }: Skill) => (
-                <Typography key={`${title}-${img}`}>
-                  {title} - {time}
-                </Typography>
+              {skillSet[skill].map((currentSkill: Skill) => (
+                <SkillCard
+                  key={`${currentSkill.title}-${currentSkill.time}`}
+                  skill={currentSkill}
+                />
               ))}
             </TabPanel>
           );
