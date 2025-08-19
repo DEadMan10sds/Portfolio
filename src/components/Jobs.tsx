@@ -1,65 +1,59 @@
 import {
   Timeline,
+  Typography,
   TimelineItem,
-  TimelineConnector,
-  TimelineHeader,
   TimelineIcon,
   TimelineBody,
-  Typography,
+  TimelineHeader,
+  TimelineConnector,
 } from "@material-tailwind/react";
 import { useState } from "react";
-import type JobInterface from "../interfaces/Job";
 import { JobCard } from "./JobCard";
-
-
-const JOBS: JobInterface[] = [
-  { company: "Bitcat" },
-  { company: "Cooperative Computing" },
-  { company: "AIA Partners" },
-  { company: "UASLP" },
-];
+import { useTranslation } from "react-i18next";
 
 export const Jobs = () => {
+  const { t } = useTranslation();
   const [company, setCompany] = useState<number>(0);
-
+  const JOBS_KEYS = Object.keys(t("jobs", { returnObjects: true }));
   const handleSelectCompany = (selectedCompany: number = 0) => {
     return () => setCompany(selectedCompany);
   };
 
   return (
-    <div className="md:flex  gap-4 p-2 ">
-      <div className="w-[32rem] py-5">
-        <Timeline>
-          {JOBS.map((job, index) => (
-            <TimelineItem key={job.company}>
-              {index !== JOBS.length - 1 && <TimelineConnector />}
-              <TimelineHeader
-                className="h-3 cursor-pointer"
-                onClick={handleSelectCompany(index)}
+    <div className="md:grid sm:flex sm:flex-col md:grid-cols-2 gap-4">
+      <Timeline className="pl-5 pt-3">
+        {JOBS_KEYS.map((job, index) => (
+          <TimelineItem key={job}>
+            {index !== JOBS_KEYS.length - 1 && <TimelineConnector />}
+            <TimelineHeader
+              className="h-3 cursor-pointer w-fit"
+              onClick={handleSelectCompany(index)}
+            >
+              <TimelineIcon />
+              <Typography
+                variant="h6"
+                color="blue-gray"
+                className="leading-none"
               >
-                <TimelineIcon />
-                <Typography
-                  variant="h6"
-                  color="blue-gray"
-                  className="leading-none"
-                >
-                  {job.company}
-                </Typography>
-              </TimelineHeader>
-              <TimelineBody className="pb-8">
-                <Typography
-                  variant="small"
-                  color="gray"
-                  className="font-normal text-gray-600"
-                >
-                  Short description
-                </Typography>
-              </TimelineBody>
-            </TimelineItem>
-          ))}
-        </Timeline>
-      </div>
-      <JobCard job={JOBS[company]} />
+                {job}
+              </Typography>
+            </TimelineHeader>
+            <TimelineBody className="pb-8">
+              <Typography
+                variant="small"
+                color="gray"
+                className="font-normal text-gray-600"
+              >
+                {t(`jobs.${job}.start`)}
+                <span> - </span>
+                {t(`jobs.${job}.end`)}
+              </Typography>
+            </TimelineBody>
+          </TimelineItem>
+        ))}
+      </Timeline>
+
+      <JobCard job={JOBS_KEYS[company]} />
     </div>
   );
 };
