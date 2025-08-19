@@ -20,5 +20,7 @@ jobs:
           script: |
             cd ~/Portfolio/Frontend/
             git checkout main
+            git fetch
+            git pull
             docker compose down
             docker compose up -d --build
