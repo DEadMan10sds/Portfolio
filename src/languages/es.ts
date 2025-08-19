@@ -92,6 +92,23 @@ const esTranslation = {
     skillsSet: {
       "Lenguajes de programación": [
         {
+          img: "html.svg",
+          title: "HTML5",
+          time: "4 año",
+        },
+        {
+          img: "javascript.svg",
+          title: "JavaScript",
+          time: "4 año",
+        },
+        {
+          img: "typescript.svg",
+          title: "TypeScript",
+          time: "1 año",
+        },
+      ],
+      "Frameworks y librerías": [
+        {
           img: "docker.svg",
           title: "Docker",
           time: "1 año",
@@ -107,7 +124,6 @@ const esTranslation = {
           time: "3 año",
         },
       ],
-      "Frameworks y librerías": [],
       "Bases de datos": [],
       Herramientas: [],
     },
