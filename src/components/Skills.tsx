@@ -26,11 +26,21 @@ export const TabsContent = () => {
       <TabsBody>
         {skillsSetKeys.map((skill) => (
           <TabPanel key={skill} value={skill}>
-            {skillSet[skill].map(({ img, title, time }) => (
-              <Typography key={`${title}-${img}`}>
-                {title} - {time}
-              </Typography>
-            ))}
+            {skillSet[skill].map(
+              ({
+                img,
+                title,
+                time,
+              }: {
+                img: string;
+                title: string;
+                time: string;
+              }) => (
+                <Typography key={`${title}-${img}`}>
+                  {title} - {time}
+                </Typography>
+              )
+            )}
           </TabPanel>
         ))}
       </TabsBody>
