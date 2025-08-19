@@ -8,9 +8,17 @@ import {
 } from "@material-tailwind/react";
 import { useTranslation } from "react-i18next";
 
+interface Skill {
+  img: string;
+  title: string;
+  time: string;
+}
+
 export const TabsContent = () => {
   const { t } = useTranslation();
-  const skillSet = t("skillsSet", { returnObjects: true });
+  const skillSet = t("skillsSet", {
+    returnObjects: true,
+  }) as Record<string, Skill[]>;
   const skillsSetKeys = Object.keys(skillSet);
 
   return (
@@ -24,25 +32,19 @@ export const TabsContent = () => {
       </TabsHeader>
 
       <TabsBody>
-        {skillsSetKeys.map((skill) => (
-          <TabPanel key={skill} value={skill}>
-            {skillSet[skill].map(
-              ({
-                img,
-                title,
-                time,
-              }: {
-                img: string;
-                title: string;
-                time: string;
-              }) => (
+        {skillsSetKeys.map((skill: string) => {
+          console.log({ skill });
+
+          return (
+            <TabPanel key={skill} value={skill}>
+              {skillSet[skill].map(({ img, title, time }: Skill) => (
                 <Typography key={`${title}-${img}`}>
                   {title} - {time}
                 </Typography>
-              )
-            )}
-          </TabPanel>
-        ))}
+              ))}
+            </TabPanel>
+          );
+        })}
       </TabsBody>
     </>
   );
