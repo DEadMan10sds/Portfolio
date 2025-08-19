@@ -1,10 +1,31 @@
-import { Card, CardBody } from "@material-tailwind/react"
-import type JobInterface from "../interfaces/Job"
+import { Card, CardBody, Typography } from "@material-tailwind/react";
+import { useTranslation } from "react-i18next";
 
-export const JobCard = ({ job }: { job: JobInterface }) => {
-    return <Card className="w-full">
-        <CardBody>
-            {job.company}
-        </CardBody>
+export const JobCard = ({ job }: { job: string }) => {
+  const { t } = useTranslation();
+  const JOB_ACTIVITIES = t(`jobs.${String(job)}.activities`, {
+    returnObjects: true,
+  });
+  return (
+    <Card className="w-full h-fit">
+      <CardBody>
+        <Typography variant="lead" className="font-bold">
+          {t(`jobs.${job}.title`)}
+        </Typography>
+        <Typography variant="paragraph">
+          {t(`jobs.${job}.description`)}
+        </Typography>
+
+        {Array.isArray(JOB_ACTIVITIES) && (
+          <ul className="ml-6">
+            {JOB_ACTIVITIES.map((activity, index: number) => (
+              <li key={`${job}_activity_${index}`} className="list-disc">
+                <Typography variant="small">{activity}</Typography>
+              </li>
+            ))}
+          </ul>
+        )}
+      </CardBody>
     </Card>
-}
+  );
+};
