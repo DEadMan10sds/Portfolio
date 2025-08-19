@@ -93,6 +93,11 @@ const esTranslation = {
       "Lenguajes de programación": [
         {
           img: "",
+          title: "Docker",
+          time: "1 año",
+        },
+        {
+          img: "",
           title: "React",
           time: "1 año",
         },
