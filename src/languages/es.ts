@@ -94,12 +94,12 @@ const esTranslation = {
         {
           img: "html.svg",
           title: "HTML5",
-          time: "4 año",
+          time: "4 años",
         },
         {
           img: "javascript.svg",
           title: "JavaScript",
-          time: "4 año",
+          time: "4 años",
         },
         {
           img: "typescript.svg",
@@ -121,7 +121,7 @@ const esTranslation = {
         {
           img: "node.svg",
           title: "NodeJs",
-          time: "3 año",
+          time: "3 años",
         },
       ],
       "Bases de datos": [],
