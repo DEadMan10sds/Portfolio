@@ -10,7 +10,7 @@ const esTranslation = {
       career: "Ingeniero en Sistemas Inteligentes",
       university: "UASLP",
       description:
-        "Egresado de la UASLP, me convertí en desarrollador web fullstack semi senior, principalmente desarrollo backends tanto en NodeJs como en NestJs con integraciones en PostgreSQL y MongoDB, además de configurar despliegues y hostings usando Nginx, me apasiona el desarrollo de videojuegos y ciberseguridad.",
+        "Egresado de la UASLP, soy desarrollador web full-stack con perfil semi senior. Me especializo en desarrollo backend utilizando Node.js y NestJS, integrando bases de datos como PostgreSQL y MongoDB.\nMe gusta hacer aplicaciones web optimizadas, fáciles de usar y escalables, que cumplan con estándares como SOLID o patrones que realmente solucionen las necesidades y requerimientos. \n\nTambién tengo experiencia en configuración de despliegues y servidores con Nginx. Fuera del entorno web, me apasiona el desarrollo de videojuegos y la administración de servidores.",
     },
     job_history: "Historial laboral",
     jobs: {
@@ -147,6 +147,11 @@ const esTranslation = {
           img: "express.svg",
           title: "ExpressJs",
           time: "3 años",
+        },
+        {
+          img: "nginx.svg",
+          title: "Nginx",
+          time: "1/2 año",
         },
       ],
       "Bases de datos": [

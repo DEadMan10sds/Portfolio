@@ -1,5 +1,5 @@
 import { Card, CardBody, Typography } from "@material-tailwind/react";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 export const MainInfo = () => {
   const { t } = useTranslation();
@@ -12,7 +12,9 @@ export const MainInfo = () => {
       </div>
       <Card className="w-full flex-row">
         <CardBody>
-          <p className="text-md">{t("mainInfo.description")}</p>
+          <p className="text-md whitespace-pre-line">
+            <Trans>{t("mainInfo.description")}</Trans>
+          </p>
         </CardBody>
       </Card>
     </>
