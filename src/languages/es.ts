@@ -111,6 +111,11 @@ const esTranslation = {
           title: "C",
           time: "3 años",
         },
+        {
+          img: "php.svg",
+          title: "PHP",
+          time: "1 año",
+        },
       ],
       "Frameworks y librerías": [
         {
@@ -128,6 +133,21 @@ const esTranslation = {
           title: "NodeJs",
           time: "3 años",
         },
+        {
+          img: "laravel.svg",
+          title: "Laravel",
+          time: "1 año",
+        },
+        {
+          img: "nest.svg",
+          title: "NestJs",
+          time: "1 año",
+        },
+        {
+          img: "express.svg",
+          title: "ExpressJs",
+          time: "3 años",
+        },
       ],
       "Bases de datos": [
         {
@@ -141,7 +161,28 @@ const esTranslation = {
           time: "1 año",
         },
       ],
-      Herramientas: [],
+      Herramientas: [
+        {
+          img: "postman.svg",
+          title: "Postman",
+          time: "3 años",
+        },
+        {
+          img: "figma.svg",
+          title: "Figma",
+          time: "3 años",
+        },
+        {
+          img: "git.svg",
+          title: "Git",
+          time: "4 años",
+        },
+        {
+          img: "github.svg",
+          title: "Github",
+          time: "4 años",
+        },
+      ],
     },
   },
 };
