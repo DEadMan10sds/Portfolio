@@ -106,6 +106,11 @@ const esTranslation = {
           title: "TypeScript",
           time: "1 año",
         },
+        {
+          img: "c.svg",
+          title: "C",
+          time: "3 años",
+        },
       ],
       "Frameworks y librerías": [
         {
@@ -126,12 +131,12 @@ const esTranslation = {
       ],
       "Bases de datos": [
         {
-          img: "mongo.svg",
+          img: "mongod.svg",
           title: "Mongo",
           time: "3 años",
         },
         {
-          img: "postgres.svg",
+          img: "postgre.svg",
           title: "PostgreSQL",
           time: "1 año",
         },
