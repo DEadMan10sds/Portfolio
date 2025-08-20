@@ -3,6 +3,7 @@ import type Skill from "../interfaces/Skill";
 import { ClockIcon } from "@heroicons/react/24/outline";
 
 export const SkillCard = ({ skill }: { skill: Skill }) => {
+  console.log(skill.img)
   return (
     <Card>
       <CardBody className="flex flex-col h-full justify-between">

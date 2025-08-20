@@ -124,7 +124,18 @@ const esTranslation = {
           time: "3 años",
         },
       ],
-      "Bases de datos": [],
+      "Bases de datos": [
+        {
+          img: "mongo.svg",
+          title: "Mongo",
+          time: "3 años",
+        },
+        {
+          img: "postgres.svg",
+          title: "PostgreSQL",
+          time: "1 año",
+        },
+      ],
       Herramientas: [],
     },
   },
