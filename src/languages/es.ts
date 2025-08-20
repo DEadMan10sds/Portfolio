@@ -126,7 +126,7 @@ const esTranslation = {
         {
           img: "react.svg",
           title: "React",
-          time: "1 año",
+          time: "2 años",
         },
         {
           img: "node.svg",

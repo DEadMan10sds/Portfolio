@@ -68,14 +68,6 @@ export function Skills() {
         skillSet={skillSet}
         className="md:hidden"
       />
-
-      {/* <Tabs
-        className="md:hidden"
-        value="Lenguajes de programación"
-        orientation="vertical"
-      >
-        <TabsContent />
-      </Tabs> */}
     </>
   );
 }

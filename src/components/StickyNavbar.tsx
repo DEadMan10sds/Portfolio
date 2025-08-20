@@ -17,6 +17,10 @@ const links = [
     url: "https://github.com/DEadMan10sds",
     text: "Github",
   },
+  {
+    url: "CV_EN_-_AdanAlejandroSanchez.pdf",
+    text: "CV",
+  },
 ];
 
 export function StickyNavbar() {
