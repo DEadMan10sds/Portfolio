@@ -9,6 +9,9 @@ export const JobCard = ({ job }: { job: string }) => {
   return (
     <Card className="w-full h-fit">
       <CardBody>
+        <Typography variant="h3" className="font-bold text-gray-800">
+          {t(job)}
+        </Typography>
         <Typography variant="lead" className="font-bold">
           {t(`jobs.${job}.title`)}
         </Typography>

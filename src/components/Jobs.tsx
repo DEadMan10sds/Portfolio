@@ -7,7 +7,7 @@ import {
   TimelineHeader,
   TimelineConnector,
 } from "@material-tailwind/react";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { JobCard } from "./JobCard";
 import { useTranslation } from "react-i18next";
 
@@ -18,6 +18,16 @@ export const Jobs = () => {
   const handleSelectCompany = (selectedCompany: number = 0) => {
     return () => setCompany(selectedCompany);
   };
+
+  const nextJob = useCallback(() => {
+    setCompany((prev) => (prev < JOBS_KEYS.length - 1 ? prev + 1 : 0));
+  }, [JOBS_KEYS]);
+
+  useEffect(() => {
+    const changeJobInterval = setInterval(nextJob, 5000);
+
+    return () => clearInterval(changeJobInterval);
+  }, [company, JOBS_KEYS, nextJob]);
 
   return (
     <div className="md:grid sm:flex sm:flex-col md:grid-cols-2 gap-4">
@@ -33,7 +43,7 @@ export const Jobs = () => {
               <Typography
                 variant="h6"
                 color="blue-gray"
-                className="leading-none"
+                className={`leading-none ${index === company && "underline"}`}
               >
                 {job}
               </Typography>

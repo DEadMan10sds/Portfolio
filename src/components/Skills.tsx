@@ -4,23 +4,20 @@ import {
   TabsBody,
   Tab,
   TabPanel,
-  Typography,
 } from "@material-tailwind/react";
 import { useTranslation } from "react-i18next";
+import type Skill from "../interfaces/Skill";
+import { SkillCard } from "./SkillCard";
+import { SkillsMobile } from "./SkillsMobile";
+import { useEffect, useState } from "react";
 
-interface Skill {
-  img: string;
-  title: string;
-  time: string;
-}
-
-export const TabsContent = () => {
-  const { t } = useTranslation();
-  const skillSet = t("skillsSet", {
-    returnObjects: true,
-  }) as Record<string, Skill[]>;
-  const skillsSetKeys = Object.keys(skillSet);
-
+export const TabsContent = ({
+  skillsSetKeys,
+  skillSet,
+}: {
+  skillsSetKeys: string[];
+  skillSet: Record<string, Skill[]>;
+}) => {
   return (
     <>
       <TabsHeader className="flex md:px-2">
@@ -31,42 +28,53 @@ export const TabsContent = () => {
         ))}
       </TabsHeader>
 
-      <TabsBody>
-        {skillsSetKeys.map((skill: string) => {
-          console.log({ skill });
-
-          return (
-            <TabPanel key={skill} value={skill}>
-              {skillSet[skill].map(({ img, title, time }: Skill) => (
-                <Typography key={`${title}-${img}`}>
-                  {title} - {time}
-                </Typography>
-              ))}
-            </TabPanel>
-          );
-        })}
+      <TabsBody className="flex justify-center">
+        {skillsSetKeys.map((skill: string) => (
+          <TabPanel
+            key={skill}
+            value={skill}
+            className="grid gap-4 sm:grid-cols-1 md:grid-cols-4"
+          >
+            {skillSet[skill].map((currentSkill: Skill) => (
+              <SkillCard
+                key={`${currentSkill.title}-${currentSkill.time}`}
+                skill={currentSkill}
+              />
+            ))}
+          </TabPanel>
+        ))}
       </TabsBody>
     </>
   );
 };
 
 export function Skills() {
+  const { t } = useTranslation();
+  const skillSet = t("skillsSet", {
+    returnObjects: true,
+  }) as Record<string, Skill[]>;
+  const skillsSetKeys = Object.keys(skillSet);
+
+  const [selectedTab, setSelectedTab] = useState(skillsSetKeys[0]);
+
+  useEffect(() => {
+    setSelectedTab(skillsSetKeys[0]);
+  }, [skillsSetKeys]);
   return (
     <>
       <Tabs
-        className="hidden md:block whitespace-nowrap "
-        value="Lenguajes de programación"
+        className="hidden md:block whitespace-nowrap"
+        value={selectedTab}
+        onChange={(val: string) => setSelectedTab(val)}
       >
-        <TabsContent />
+        <TabsContent skillsSetKeys={skillsSetKeys} skillSet={skillSet} />
       </Tabs>
 
-      <Tabs
+      <SkillsMobile
+        skillsSetKeys={skillsSetKeys}
+        skillSet={skillSet}
         className="md:hidden"
-        value="Lenguajes de programación"
-        orientation="vertical"
-      >
-        <TabsContent />
-      </Tabs>
+      />
     </>
   );
 }

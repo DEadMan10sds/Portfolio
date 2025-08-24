@@ -10,7 +10,7 @@ const esTranslation = {
       career: "Ingeniero en Sistemas Inteligentes",
       university: "UASLP",
       description:
-        "Egresado de la UASLP, me convertí en desarrollador web fullstack semi senior, principalmente desarrollo backends tanto en NodeJs como en NestJs con integraciones en PostgreSQL y MongoDB, además de configurar despliegues y hostings usando Nginx, me apasiona el desarrollo de videojuegos y ciberseguridad.",
+        "Me especializo en desarrollo backend utilizando Node.js y NestJS, integrando bases de datos como PostgreSQL y MongoDB.\nMi prioridad es desarrollar aplicaciones web optimizadas, fáciles de usar y escalables, que cumplan con estándares y satisfagan las necesidades de los usuarios. \n\nAparte del código y aplicaciones, me apasiona la administración de servidores e infraestructura de TI, desde hostear aplicaciones en Máquinas virtuales hasta administrar clústers de servidores.",
     },
     job_history: "Historial laboral",
     jobs: {
@@ -37,6 +37,7 @@ const esTranslation = {
         activities: [
           "Desarrollo de interfaces en figma",
           "Configuración de Triggers en github",
+          "Desarrollo frontend en react",
         ],
       },
       "AIA Partners": {
@@ -79,7 +80,7 @@ const esTranslation = {
       },
       UPSLP: {
         description:
-          "Desarrollo de videojuego 'Brand Wars' para la 'Semana Lag 20220' usando 'RPG Maker'",
+          "Desarrollo de videojuego 'Brand Wars' para la 'Semana Lag 2022' usando 'RPG Maker'",
         title: "Desarrollo freelance",
         start: "Junio 2022",
         end: "Septiembre 2023",
@@ -92,24 +93,107 @@ const esTranslation = {
     skillsSet: {
       "Lenguajes de programación": [
         {
-          img: "",
+          img: "html.svg",
+          title: "HTML5",
+          time: "4 años",
+        },
+        {
+          img: "javascript.svg",
+          title: "JavaScript",
+          time: "4 años",
+        },
+        {
+          img: "typescript.svg",
+          title: "TypeScript",
+          time: "1 año",
+        },
+        {
+          img: "c.svg",
+          title: "C",
+          time: "3 años",
+        },
+        {
+          img: "php.svg",
+          title: "PHP",
+          time: "1 año",
+        },
+      ],
+      "Frameworks y librerías": [
+        {
+          img: "docker.svg",
           title: "Docker",
           time: "1 año",
         },
         {
-          img: "",
+          img: "react.svg",
           title: "React",
+          time: "2 años",
+        },
+        {
+          img: "node.svg",
+          title: "NodeJs",
+          time: "3 años",
+        },
+        {
+          img: "laravel.svg",
+          title: "Laravel",
           time: "1 año",
         },
         {
-          img: "",
-          title: "NodeJs",
-          time: "3 año",
+          img: "nest.svg",
+          title: "NestJs",
+          time: "1 año",
+        },
+        {
+          img: "express.svg",
+          title: "ExpressJs",
+          time: "3 años",
+        },
+        {
+          img: "nginx.svg",
+          title: "Nginx",
+          time: "1/2 año",
         },
       ],
-      "Frameworks y librerías": [],
-      "Bases de datos": [],
-      Herramientas: [],
+      "Bases de datos": [
+        {
+          img: "mongod.svg",
+          title: "Mongo",
+          time: "3 años",
+        },
+        {
+          img: "postgre.svg",
+          title: "PostgreSQL",
+          time: "1 año",
+        },
+      ],
+      Herramientas: [
+        {
+          img: "postman.svg",
+          title: "Postman",
+          time: "3 años",
+        },
+        {
+          img: "figma.svg",
+          title: "Figma",
+          time: "3 años",
+        },
+        {
+          img: "git.svg",
+          title: "Git",
+          time: "4 años",
+        },
+        {
+          img: "github.svg",
+          title: "Github",
+          time: "4 años",
+        },
+        {
+          img: "proxmox.svg",
+          title: "Proxmox",
+          time: "1 año",
+        },
+      ],
     },
   },
 };
