@@ -7,6 +7,7 @@ import {
 } from "@material-tailwind/react";
 //import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
+import { useTranslation } from "react-i18next";
 
 const links = [
   {
@@ -17,16 +18,11 @@ const links = [
     url: "https://github.com/DEadMan10sds",
     text: "Github",
   },
-  {
-    url: "CV_EN_-_AdanAlejandroSanchez.pdf",
-    text: "CV",
-  },
 ];
 
 export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
-  //const { t } = useTranslation();
-
+  const { i18n } = useTranslation();
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -48,10 +44,17 @@ export function StickyNavbar() {
             className="flex items-center text-md font-semibold"
           >
             {link.text}
-            {/* {t("home")} */}
           </a>
         </Typography>
       ))}
+      <Typography as="li" color="blue-gray" className="p-1 font-normal">
+        <a
+          href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
+          className="flex items-center text-md font-semibold"
+        >
+          CV
+        </a>
+      </Typography>
     </ul>
   );
 
