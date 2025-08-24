@@ -10,7 +10,7 @@ const esTranslation = {
       career: "Ingeniero en Sistemas Inteligentes",
       university: "UASLP",
       description:
-        "Egresado de la UASLP, soy desarrollador web full-stack con perfil semi senior. Me especializo en desarrollo backend utilizando Node.js y NestJS, integrando bases de datos como PostgreSQL y MongoDB.\nMe gusta hacer aplicaciones web optimizadas, fáciles de usar y escalables, que cumplan con estándares como SOLID o patrones que realmente solucionen las necesidades y requerimientos. \n\nTambién tengo experiencia en configuración de despliegues y servidores con Nginx. Fuera del entorno web, me apasiona el desarrollo de videojuegos y la administración de servidores.",
+        "Me especializo en desarrollo backend utilizando Node.js y NestJS, integrando bases de datos como PostgreSQL y MongoDB.\nMi prioridad es desarrollar aplicaciones web optimizadas, fáciles de usar y escalables, que cumplan con estándares y satisfagan las necesidades de los usuarios. \n\nAparte del código y aplicaciones, me apasiona la administración de servidores e infraestructura de TI, desde hostear aplicaciones en Máquinas virtuales hasta administrar clústers de servidores.",
     },
     job_history: "Historial laboral",
     jobs: {
@@ -37,6 +37,7 @@ const esTranslation = {
         activities: [
           "Desarrollo de interfaces en figma",
           "Configuración de Triggers en github",
+          "Desarrollo frontend en react",
         ],
       },
       "AIA Partners": {
@@ -79,7 +80,7 @@ const esTranslation = {
       },
       UPSLP: {
         description:
-          "Desarrollo de videojuego 'Brand Wars' para la 'Semana Lag 20220' usando 'RPG Maker'",
+          "Desarrollo de videojuego 'Brand Wars' para la 'Semana Lag 2022' usando 'RPG Maker'",
         title: "Desarrollo freelance",
         start: "Junio 2022",
         end: "Septiembre 2023",
@@ -186,6 +187,11 @@ const esTranslation = {
           img: "github.svg",
           title: "Github",
           time: "4 años",
+        },
+        {
+          img: "proxmox.svg",
+          title: "Proxmox",
+          time: "1 año",
         },
       ],
     },

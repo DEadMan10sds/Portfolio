@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import type Skill from "../interfaces/Skill";
 import { SkillCard } from "./SkillCard";
 import { SkillsMobile } from "./SkillsMobile";
+import { useEffect, useState } from "react";
 
 export const TabsContent = ({
   skillsSetKeys,
@@ -54,11 +55,17 @@ export function Skills() {
   }) as Record<string, Skill[]>;
   const skillsSetKeys = Object.keys(skillSet);
 
+  const [selectedTab, setSelectedTab] = useState(skillsSetKeys[0]);
+
+  useEffect(() => {
+    setSelectedTab(skillsSetKeys[0]);
+  }, [skillsSetKeys]);
   return (
     <>
       <Tabs
-        className="hidden md:block whitespace-nowrap "
-        value="Lenguajes de programación"
+        className="hidden md:block whitespace-nowrap"
+        value={selectedTab}
+        onChange={(val: string) => setSelectedTab(val)}
       >
         <TabsContent skillsSetKeys={skillsSetKeys} skillSet={skillSet} />
       </Tabs>
