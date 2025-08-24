@@ -4,7 +4,7 @@ import { ClockIcon } from "@heroicons/react/24/outline";
 
 export const SkillCard = ({ skill }: { skill: Skill }) => {
   return (
-    <Card>
+    <Card className="border-gray-300 border">
       <CardBody className="flex flex-col h-full justify-between">
         <img
           src={skill.img}

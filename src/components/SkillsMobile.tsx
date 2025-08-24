@@ -31,7 +31,7 @@ export const SkillsMobile = ({
           ))}
         </List>
       </Card>
-      <div className="flex flex-col gap-3">
+      <div className="grid grid-cols-3 gap-4">
         {skillSet[skillSetSelected].map((currentSkill: Skill) => (
           <SkillCard
             key={`${currentSkill.title}-${currentSkill.time}`}
