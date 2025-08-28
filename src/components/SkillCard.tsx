@@ -11,12 +11,16 @@ export const SkillCard = ({ skill }: { skill: Skill }) => {
           alt={`${skill.title}-logo`}
           className="m-auto w-[60%]"
         />
-        <Typography variant="h5" color="blue-gray">
+        <Typography variant="h5" className="text-wrap" color="blue-gray">
           {skill.title}
         </Typography>
-        <div className="flex gap-2 items-center">
-          <ClockIcon className="size-4" />
-          <Typography variant="h6" color="blue-gray">
+        <div className="flex gap-2 items-center max-h-[20%]">
+          <ClockIcon className="h-fit w-fit max-h-[95%] md:max-h-[45%]" />
+          <Typography
+            variant="h6"
+            className="h-fit text-nowrap"
+            color="blue-gray"
+          >
             {skill.time}
           </Typography>
         </div>
