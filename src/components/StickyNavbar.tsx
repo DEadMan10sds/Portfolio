@@ -48,7 +48,7 @@ export function StickyNavbar() {
       ))}
       <Typography as="li" color="blue-gray" className="p-1 font-normal">
         <a
-          href={`CV_EN_-_AdanAlejandroSanchez.pdf`}
+          href={`CV_EN - AdanAlejandroSanchez.pdf`}
           // href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
           className="flex items-center text-md font-semibold"
         >
