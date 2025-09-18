@@ -1,6 +1,7 @@
 services:
   portfolio-frontend-dev:
     container_name: portfolio_dev
+    restart: always
     build:
       context: .
       dockerfile: Dockerfile.dev
