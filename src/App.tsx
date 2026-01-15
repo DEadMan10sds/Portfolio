@@ -1,4 +1,5 @@
 import { StickyNavbar, MainInfo, Jobs } from "./components";
+import { Projects } from "./components/Projects";
 import { Separator } from "./components/Separator";
 import { Skills } from "./components/Skills";
 
@@ -12,6 +13,8 @@ function App() {
         <Jobs />
         <Separator title="skills" />
         <Skills />
+        <Separator title="Projects" />
+        <Projects />
       </div>
     </>
   );
