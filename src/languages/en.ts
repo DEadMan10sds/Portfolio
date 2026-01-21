@@ -7,7 +7,7 @@ const enTranslation = {
       en: "English",
     },
     mainInfo: {
-      career: "Intelligent Systems Engineeer",
+      career: "Intelligent Systems Engineer",
       university: "UASLP",
       description:
         "Software developer focused on backend and system architecture, with experience building scalable, secure and business-oriented applications. Work primarily with Node.js and NestJS, designing APIs, data flows and systems that prioritize maintainability, performance and technical clarity. Tengo hands-on experience in deployment and infrastructure, managing Docker and CI/CD environments, allowing me to close the full cycle from development to production.",
