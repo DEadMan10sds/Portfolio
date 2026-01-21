@@ -8,7 +8,7 @@ import {
 //import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 const links = [
   {

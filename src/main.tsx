@@ -1,12 +1,11 @@
-import { StrictMode, } from "react";
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import "./i18n.ts";
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
-import mainTheme from "./themes/Theme.json"
-
+import { Theme } from "./themes/Theme.ts";
 
 const router = createBrowserRouter([
   {
@@ -15,15 +14,14 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    Component: () => <Navigate to="/" replace />
-  }
-])
-
+    Component: () => <Navigate to="/" replace />,
+  },
+]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider value={mainTheme}>
+    <ThemeProvider value={Theme}>
       <RouterProvider router={router} />
     </ThemeProvider>
-  </StrictMode>
+  </StrictMode>,
 );

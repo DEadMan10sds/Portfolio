@@ -81,7 +81,7 @@ export function Skills() {
       <Tabs
         className="hidden md:block"
         value={selectedTab}
-        onChange={(val) => typeof val === "string" && setSelectedTab(val)}
+        onChange={(val: any) => typeof val === "string" && setSelectedTab(val)}
       >
         <TabsContent ids={ids} skillSet={skillSet} />
       </Tabs>
