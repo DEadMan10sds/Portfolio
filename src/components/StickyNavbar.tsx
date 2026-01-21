@@ -51,10 +51,12 @@ export function StickyNavbar() {
           CV
         </a>
       </Typography>
+      <Email />
     </ul>
   );
 
   return (
+<<<<<<< HEAD
     <Navbar
       className={clsx(
         "sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4",
@@ -63,6 +65,10 @@ export function StickyNavbar() {
       )}
     >
       <div className="flex items-center justify-between">
+=======
+    <Navbar className="sticky top-0 z-20 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
+      <div className="flex items-center justify-between text-blue-gray-900">
+>>>>>>> main
         <Typography
           as="a"
           href="#"
