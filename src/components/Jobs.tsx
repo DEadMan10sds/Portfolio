@@ -3,7 +3,6 @@ import {
   Typography,
   TimelineItem,
   TimelineIcon,
-  TimelineBody,
   TimelineHeader,
 } from "@material-tailwind/react";
 import { useCallback, useEffect, useMemo, useState } from "react";
