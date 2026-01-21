@@ -15,8 +15,9 @@ export const Jobs = () => {
   const [company, setCompany] = useState(0);
 
   const JOBS_KEYS = useMemo(
-    () => Object.keys(t("jobs", { returnObjects: true }) as Record<string, any>),
-    [t]
+    () =>
+      Object.keys(t("jobs", { returnObjects: true }) as Record<string, any>),
+    [t],
   );
 
   const nextJob = useCallback(() => {
@@ -25,7 +26,7 @@ export const Jobs = () => {
 
   useEffect(() => {
     if (!JOBS_KEYS.length) return;
-    const id = window.setInterval(nextJob, 5000);
+    const id = window.setInterval(nextJob, 15000);
     return () => window.clearInterval(id);
   }, [JOBS_KEYS.length, nextJob]);
 
@@ -65,21 +66,26 @@ export const Jobs = () => {
                   <div
                     className={[
                       "ml-2 flex-1 rounded-xl px-3 py-2 transition",
-                      selected ? "bg-[rgba(13,115,119,0.12)]" : "hover:bg-white/5",
+                      selected
+                        ? "bg-[rgba(13,115,119,0.12)]"
+                        : "hover:bg-white/5",
                     ].join(" ")}
                   >
-                    <Typography variant="h6" className="text-white leading-tight">
+                    <Typography
+                      variant="h6"
+                      className="text-white leading-tight"
+                    >
                       {job}
                     </Typography>
 
                     <Typography variant="small" className="text-white/60">
-                      {t(`jobs.${job}.start`)} <span className="text-white/35">—</span>{" "}
+                      {t(`jobs.${job}.start`)}{" "}
+                      <span className="text-white/35">—</span>{" "}
                       {t(`jobs.${job}.end`)}
                     </Typography>
                   </div>
                 </TimelineHeader>
               </TimelineItem>
-
             );
           })}
         </Timeline>

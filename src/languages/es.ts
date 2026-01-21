@@ -10,61 +10,59 @@ const esTranslation = {
       career: "Ingeniero en Sistemas Inteligentes",
       university: "UASLP",
       description:
-        "Me especializo en desarrollo backend utilizando Node.js y NestJS, integrando bases de datos como PostgreSQL y MongoDB.\nMi prioridad es desarrollar aplicaciones web optimizadas, fáciles de usar y escalables, que cumplan con estándares y satisfagan las necesidades de los usuarios. \n\nAparte del código y aplicaciones, me apasiona la administración de servidores e infraestructura de TI, desde hostear aplicaciones en Máquinas virtuales hasta administrar clústers de servidores.",
+        "Desarrollador de software enfocado en backend y arquitectura de sistemas, con experiencia construyendo aplicaciones escalables, seguras y orientadas a negocio. Trabajo principalmente con Node.js y NestJS, diseñando APIs, flujos de datos y sistemas que priorizan mantenibilidad, rendimiento y claridad técnica. Tengo experiencia práctica en despliegue e infraestructura, administrando entornos con Docker y CI/CD, lo que me permite cerrar el ciclo completo desde el desarrollo hasta producción.",
     },
     job_history: "Historial laboral",
     jobs: {
       "Bitcat Services": {
         description:
-          "Desarrollo de aplicaciones web para industria 4.0 con integraciones a PLC's, manejo de servidores y mantenimiento de bases de datos.",
-        title: "Desarrollador Web Javascript",
-        start: "Mayo 2024",
-        end: "Actualidad",
+          "Desarrollo de sistemas web para entornos de industria 4.0, integrando software con infraestructura física y mantenimiento de sistemas en producción.",
         activities: [
-          "Exportaciones de bitácoras desde frontend",
-          "Optimización de aplicaciones y desarrollo de funcionalidades web",
-          "Implementación de Docker en entornos Frontend y Backend",
-          "Mantenimiento de software",
-          "Conección de PLC's con sistemas web",
-          "CI/CD",
+          "Diseño y desarrollo de sistemas FullStack orientados a presupuestos, proyectos y monitoreo.",
+          "Integración de APIs internas con servicios externos y hardware industrial (PLC).",
+          "Automatización de despliegues y estandarización de entornos con Docker y CI/CD.",
+          "Administración de infraestructura virtualizada para despliegue y monitoreo de sistemas.",
+          "Monitoreo de infraestructura de redes y soporte a usuarios.",
         ],
+        title: "Desarrollador Web Javascript",
+        start: "Marzo 2024",
+        end: "Actualidad",
       },
       "Cooperative Computing": {
-        description: "Desarrollador web de aplicaciones para clientes externos",
+        description:
+          "Desarrollador de aplicaciones web para clientes externos, asegurando una correcta experiencia de usuario además de implementar estandarizaciones en el formateo de código.",
         title: "Desarrollador fullstack",
         start: "Septiembre 2023",
-        end: "Mayo 2024",
+        end: "Marzo 2024",
         activities: [
-          "Desarrollo de interfaces en figma",
-          "Configuración de Triggers en github",
-          "Desarrollo frontend en react",
+          "Desarrollo de interfaces de usuario en figma, implementando flujos y haciendo demostraciones previas a su codificación.",
+          "Configuración de Triggers en github para estandarizar el formato del código de acuerdo a reglas preestablecidas.",
+          "Desarrollo frontend usando react siguiendo las interfaces y las experiencias de usuario previamente desarrolladas.",
         ],
       },
       "AIA Partners": {
         description:
-          "Desarrollador backend principal para un sistema financiero en nodeJs con MongoDB",
+          "Líder del desarrollo backend enfocado en finanzas, usando nodeJs y MongoDB, asegurando el correcto cálculo de datos financieros para usuarios y administradores.",
         title: "Encargado de desarrollo backend",
         start: "Junio 2022",
         end: "Septiembre 2023",
         activities: [
-          "Despliegue de sistemas backend",
-          "Mantenimiento de bases de datos",
-          "Encriptado de archivos en Bases de Datos y almacenamientos externos",
-          "Configuración de CronJobs",
-          "Desarrollo de documentación y orientación de personal",
-          "Implementación de ReplicaSets para bases de datos Mongo",
+          "Despliegue de sistemas backend automatizados para reducir tiempos de espera y configuraciones manuales.",
+          "Mantenimiento de bases de datos y Replica Sets, asegurando la disponibilidad de datos.",
+          "Encriptado de archivos en Bases de Datos y almacenamientos externos de imágenes para optimizar los tiempos de carga del frontend",
+          "Desarrollo de documentación y orientación de personal para el mantenimiento del sistema y actualizaciones.",
         ],
       },
-
       "Pixel & Byte": {
         description:
-          "Desarrollo de un conversor de imagenes DCOM a archivos JSON para entrenamiento de IA",
+          "Desarrollo de un conversor de imagenes DCOM a archivos JSON para entrenamiento de IA.",
         title: "Servicio Social",
         start: "Junio 2022",
         end: "Septiembre 2023",
         activities: [
-          "Conversión de buffers de imágenes DCOM a formato JSON",
-          "Servidor NodeJs capaz de ejecutar scripts Python",
+          "Conversión de buffers de imágenes DCOM a formato JSON sin pérdida de datos.",
+          "Servidor NodeJs capaz de ejecutar scripts Python.",
+          "Scripts con Python para el manejo de grandes cantidades de información.",
         ],
       },
       UPSLP: {
@@ -74,7 +72,9 @@ const esTranslation = {
         start: "Junio 2022",
         end: "Septiembre 2023",
         activities: [
-          "Desarrollo de funcionalidades en Js para manejo de Interfaz de usuario e interacciones con el entorno",
+          "Desarrollo de funcionalidades en Javascript para manejo de Interfaz de usuario e interacciones con el entorno.",
+          "Pruebas de usuario para el correcto funcionamiento del videojuego, asegurando que sea entretenido y digerible.",
+          "Implementación de puntajes en base al conocimiento y desempeño de los usuarios",
         ],
       },
     },
@@ -86,33 +86,6 @@ const esTranslation = {
       tools: "Herramientas",
     },
     skillsSet: {
-      languages: [
-        {
-          img: "html.svg",
-          title: "HTML5",
-          time: "4 años",
-        },
-        {
-          img: "javascript.svg",
-          title: "JavaScript",
-          time: "4 años",
-        },
-        {
-          img: "typescript.svg",
-          title: "TypeScript",
-          time: "1 año",
-        },
-        {
-          img: "c.svg",
-          title: "C",
-          time: "3 años",
-        },
-        {
-          img: "php.svg",
-          title: "PHP",
-          time: "1 año",
-        },
-      ],
       frameworks: [
         {
           img: "docker.svg",
@@ -148,6 +121,33 @@ const esTranslation = {
           img: "nginx.svg",
           title: "Nginx",
           time: "1/2 año",
+        },
+      ],
+      languages: [
+        {
+          img: "html.svg",
+          title: "HTML5",
+          time: "4 años",
+        },
+        {
+          img: "javascript.svg",
+          title: "JavaScript",
+          time: "4 años",
+        },
+        {
+          img: "typescript.svg",
+          title: "TypeScript",
+          time: "1 año",
+        },
+        {
+          img: "c.svg",
+          title: "C",
+          time: "3 años",
+        },
+        {
+          img: "php.svg",
+          title: "PHP",
+          time: "1 año",
         },
       ],
       databases: [
