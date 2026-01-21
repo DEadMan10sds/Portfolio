@@ -54,18 +54,6 @@ const enTranslation = {
           "ReplicaSet implementation for MongoDB",
         ],
       },
-      UASLP: {
-        description:
-          "Computation laboratory mainainance and program installations",
-        title: "Intern",
-        start: "June 2022",
-        end: "September 2023",
-        activities: [
-          "Access control to laboratory",
-          "Cleaning computer equipment",
-          "Civil engineering program installation",
-        ],
-      },
       "Pixel & Byte": {
         description: "DCOM to JSON conversor development for AI training",
         title: "Social Service",
@@ -86,8 +74,14 @@ const enTranslation = {
       },
     },
     skills: "Skills",
+    skillsTabs: {
+      languages: "Programming languages",
+      frameworks: "Frameworks & libraries",
+      databases: "Databases",
+      tools: "Tools",
+    },
     skillsSet: {
-      "Programming languages": [
+      languages: [
         {
           img: "html.svg",
           title: "HTML5",
@@ -114,7 +108,7 @@ const enTranslation = {
           time: "1 year",
         },
       ],
-      "Frameworks & libraries": [
+      frameworks: [
         {
           img: "docker.svg",
           title: "Docker",
@@ -151,7 +145,7 @@ const enTranslation = {
           time: "1/2 year",
         },
       ],
-      Databases: [
+      databases: [
         {
           img: "mongod.svg",
           title: "Mongo",
@@ -163,7 +157,7 @@ const enTranslation = {
           time: "1 year",
         },
       ],
-      Tools: [
+      tools: [
         {
           img: "postman.svg",
           title: "Postman",

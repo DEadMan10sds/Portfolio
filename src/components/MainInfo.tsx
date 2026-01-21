@@ -6,15 +6,26 @@ export const MainInfo = () => {
 
   return (
     <>
-      <div className="flex flex-col gap-2 mt-4 items-center">
-        <Typography variant="h1">{t("mainInfo.career")}</Typography>
-        <Typography variant="h2">Adán Alejandro Sánchez</Typography>
+      <div className="flex flex-col gap-2 mt-10 items-center text-center">
+        <Typography
+          variant="h1"
+          className="text-[#F1F5F9] drop-shadow-[0_2px_18px_rgba(20,255,236,0.10)]"
+        >
+          {t("mainInfo.career")}
+        </Typography>
+
+        <Typography
+          variant="h2"
+          className="text-white/85 font-semibold"
+        >
+          Adán Alejandro Sánchez
+        </Typography>
       </div>
-      <Card className="w-full flex-row">
+      <Card className="w-full flex-row bg-[rgba(50,50,50,0.55)] backdrop-blur-xl border border-[rgba(20,255,236,0.14)] shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
         <CardBody>
-          <p className="text-md whitespace-pre-line">
+          <Typography variant="paragraph" color="title" className="whitespace-pre-line">
             <Trans>{t("mainInfo.description")}</Trans>
-          </p>
+          </Typography>
         </CardBody>
       </Card>
     </>

@@ -9,7 +9,21 @@ export default withMT({
     "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "0" },
+          "10%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-700px)",
+            opacity: "0",
+          },
+        },
+      },
+      animation: {
+        meteor: "meteor  var(--meteor-duration,4s) linear infinite",
+      },
+    },
     fontFamily: {
       roboto: ["Roboto", "sans-serif"],
     },

@@ -1,3 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --c1: #212121;
+  --c2: #323232;
+  --c3: #0d7377;
+  --c4: #14ffec;
+}
+
+@layer components {
+  .jobs-panel {
+    @apply rounded-2xl bg-[rgba(33,33,33,0.42)] backdrop-blur-xl;
+    @apply border border-[rgba(13,115,119,0.22)] shadow-[0_20px_60px_rgba(0,0,0,0.45)];
+  }
+
+  /* rail propio (fino, continuo, elegante) */
+  .jobs-rail {
+    @apply relative;
+  }
+  .jobs-rail::before {
+    content: "";
+    @apply absolute left-[10px] top-2 bottom-2 w-px;
+    background: rgba(13, 115, 119, 0.45);
+  }
+
+  .jobs-tl {
+    @apply pl-0;
+  }
+
+  .jobs-tl-item {
+    @apply pb-5;
+  }
+
+  .jobs-tl-header {
+    @apply w-full cursor-pointer rounded-xl px-2 py-2 transition;
+    @apply hover:bg-[rgba(50,50,50,0.35)];
+  }
+  .jobs-tl-header.is-selected {
+    @apply bg-[rgba(13,115,119,0.10)];
+  }
+
+  /* DOT perfecto (sin “poste”) */
+  .jobs-dot {
+    @apply h-3 w-3 p-0 rounded-full;
+    background: rgba(148, 163, 184, 0.55);
+  }
+  .jobs-dot.is-selected {
+    background: #14ffec;
+    box-shadow: 0 0 18px rgba(20, 255, 236, 0.25);
+  }
+
+  .jobs-title {
+    @apply ml-3 leading-tight text-white/85 transition;
+  }
+  .jobs-title.is-selected {
+    @apply text-white;
+  }
+
+  /* alinear fechas debajo del titulo */
+  .jobs-body {
+    @apply pb-0 pl-[34px];
+  }
+
+  .jobs-range {
+    @apply text-white/60;
+  }
+  .jobs-dash {
+    @apply text-white/35;
+  }
+}

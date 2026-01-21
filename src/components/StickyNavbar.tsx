@@ -8,6 +8,7 @@ import {
 //import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 
 const links = [
   {
@@ -36,7 +37,6 @@ export function StickyNavbar() {
         <Typography
           key={link.url}
           as="li"
-          color="blue-gray"
           className="p-1 font-normal"
         >
           <a
@@ -47,7 +47,7 @@ export function StickyNavbar() {
           </a>
         </Typography>
       ))}
-      <Typography as="li" color="blue-gray" className="p-1 font-normal">
+      <Typography as="li" className="p-1 font-normal">
         <a
           href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
           className="flex items-center text-md font-semibold"
@@ -59,18 +59,24 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className="sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4">
-      <div className="flex items-center justify-between text-blue-gray-900">
+    <Navbar className={clsx(
+      "sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4",
+      "bg-[rgba(33,33,33,0.65)] backdrop-blur-md",
+      "border-b border-[rgba(20,255,236,0.12)]"
+    )}>
+      <div className="flex items-center justify-between">
         <Typography
           as="a"
           href="#"
-          className="mr-4 cursor-pointer py-1.5 font-medium"
+          className="mr-4 cursor-pointer py-1.5 font-semibold tracking-tight"
         >
           Adán Sánchez
         </Typography>
         <div className="mr-4 hidden lg:block">{navList}</div>
         <div className="hidden lg:block">
-          <ChangeLanguage />
+          <div className="rounded-lg border border-[rgba(13,115,119,0.65)] bg-[rgba(50,50,50,0.35)] hover:border-[#14FFEC] transition">
+            <ChangeLanguage />
+          </div>
         </div>
 
         <IconButton

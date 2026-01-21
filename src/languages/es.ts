@@ -55,18 +55,7 @@ const esTranslation = {
           "Implementación de ReplicaSets para bases de datos Mongo",
         ],
       },
-      UASLP: {
-        description:
-          "Encargado de mantenimiento a equipos de computación e instalación de programas",
-        title: "Becario",
-        start: "Junio 2022",
-        end: "Septiembre 2023",
-        activities: [
-          "Control de acceso a laboratorios de cómputo",
-          "Limpieza a equipos de cómputo",
-          "Instalación de programas de área Civil",
-        ],
-      },
+
       "Pixel & Byte": {
         description:
           "Desarrollo de un conversor de imagenes DCOM a archivos JSON para entrenamiento de IA",
@@ -90,8 +79,14 @@ const esTranslation = {
       },
     },
     skills: "Habilidades",
+    skillsTabs: {
+      languages: "Lenguajes de programación",
+      frameworks: "Frameworks y librerías",
+      databases: "Bases de datos",
+      tools: "Herramientas",
+    },
     skillsSet: {
-      "Lenguajes de programación": [
+      languages: [
         {
           img: "html.svg",
           title: "HTML5",
@@ -118,7 +113,7 @@ const esTranslation = {
           time: "1 año",
         },
       ],
-      "Frameworks y librerías": [
+      frameworks: [
         {
           img: "docker.svg",
           title: "Docker",
@@ -155,7 +150,7 @@ const esTranslation = {
           time: "1/2 año",
         },
       ],
-      "Bases de datos": [
+      databases: [
         {
           img: "mongod.svg",
           title: "Mongo",
@@ -167,7 +162,7 @@ const esTranslation = {
           time: "1 año",
         },
       ],
-      Herramientas: [
+      tools: [
         {
           img: "postman.svg",
           title: "Postman",

@@ -6,7 +6,7 @@ export const Separator = ({ title }: { title: string }) => {
 
   return (
     <div className="flex items-center w-full text-nowrap gap-3">
-      <Typography className="w-fit" variant="h4">
+      <Typography className="w-fit" color="white" variant="h4">
         {t(title)}
       </Typography>
       <hr className="border-blue-gray-100 w-full" />
