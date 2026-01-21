@@ -5,10 +5,9 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-//import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
-import { useTranslation } from "react-i18next";
 import clsx from "clsx";
+//import { useTranslation } from "react-i18next";
 
 const links = [
   {
@@ -23,8 +22,7 @@ const links = [
 
 export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
-  const { i18n } = useTranslation();
-  console.log(i18n.language);
+  //const { i18n } = useTranslation();
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -46,7 +44,8 @@ export function StickyNavbar() {
       ))}
       <Typography as="li" className="p-1 font-normal">
         <a
-          href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
+          href={`CV_EN - AdanAlejandroSanchez.pdf`}
+          // href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
           className="flex items-center text-md font-semibold"
         >
           CV

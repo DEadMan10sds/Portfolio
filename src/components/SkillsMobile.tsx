@@ -14,7 +14,7 @@ export const SkillsMobile = ({
   className: string;
 }) => {
   const [skillSetSelected, setSkillSetSelected] = useState<string>(
-    skillsSetKeys[0]
+    skillsSetKeys[0],
   );
   const { t } = useTranslation();
 
@@ -46,7 +46,9 @@ export const SkillsMobile = ({
                     selected ? "bg-[#14FFEC]" : "bg-white/30",
                   ].join(" ")}
                 />
-                <Typography className={selected ? "text-white" : "text-white/80"}>
+                <Typography
+                  className={selected ? "text-white" : "text-white/80"}
+                >
                   {t(`skillsTabs.${skillName}`)}
                 </Typography>
               </ListItem>
@@ -54,7 +56,6 @@ export const SkillsMobile = ({
           })}
         </List>
       </Card>
-
       <div className="grid grid-cols-2 gap-4">
         {skillSet[skillSetSelected]?.map((currentSkill: Skill) => (
           <SkillCard
