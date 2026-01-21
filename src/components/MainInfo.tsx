@@ -14,16 +14,17 @@ export const MainInfo = () => {
           {t("mainInfo.career")}
         </Typography>
 
-        <Typography
-          variant="h2"
-          className="text-white/85 font-semibold"
-        >
+        <Typography variant="h2" className="text-white/85 font-semibold">
           Adán Alejandro Sánchez
         </Typography>
       </div>
       <Card className="w-full flex-row bg-[rgba(50,50,50,0.55)] backdrop-blur-xl border border-[rgba(20,255,236,0.14)] shadow-[0_20px_60px_rgba(0,0,0,0.45)]">
         <CardBody>
-          <Typography variant="paragraph" color="title" className="whitespace-pre-line">
+          <Typography
+            variant="paragraph"
+            color="white"
+            className="whitespace-pre-line"
+          >
             <Trans>{t("mainInfo.description")}</Trans>
           </Typography>
         </CardBody>

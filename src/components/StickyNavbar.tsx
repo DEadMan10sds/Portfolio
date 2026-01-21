@@ -24,21 +24,18 @@ const links = [
 export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
   const { i18n } = useTranslation();
+  console.log(i18n.language);
   useEffect(() => {
     window.addEventListener(
       "resize",
-      () => window.innerWidth >= 960 && setOpenNav(false)
+      () => window.innerWidth >= 960 && setOpenNav(false),
     );
   }, []);
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {links.map((link) => (
-        <Typography
-          key={link.url}
-          as="li"
-          className="p-1 font-normal"
-        >
+        <Typography key={link.url} as="li" className="p-1 font-normal">
           <a
             href={link.url}
             className="flex items-center text-md font-semibold"
@@ -59,11 +56,13 @@ export function StickyNavbar() {
   );
 
   return (
-    <Navbar className={clsx(
-      "sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4",
-      "bg-[rgba(33,33,33,0.65)] backdrop-blur-md",
-      "border-b border-[rgba(20,255,236,0.12)]"
-    )}>
+    <Navbar
+      className={clsx(
+        "sticky top-0 z-50 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4",
+        "bg-[rgba(33,33,33,0.65)] backdrop-blur-md",
+        "border-b border-[rgba(20,255,236,0.12)]",
+      )}
+    >
       <div className="flex items-center justify-between">
         <Typography
           as="a"
