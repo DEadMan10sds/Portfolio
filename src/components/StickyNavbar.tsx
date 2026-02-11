@@ -9,6 +9,7 @@ import {
 import { ChangeLanguage } from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import { clsx } from "clsx";
+import { Link } from "react-router";
 
 const links = [
   {
@@ -52,6 +53,14 @@ export function StickyNavbar() {
           CV
         </a>
       </Typography>
+      <Typography as="li" className="p-1 font-normal">
+        <Link
+          to="/projects"
+          className="flex items-center text-md font-semibold"
+        >
+          Projects
+        </Link>
+      </Typography>
     </ul>
   );
 
@@ -64,13 +73,11 @@ export function StickyNavbar() {
       )}
     >
       <div className="flex items-center justify-between">
-        <Typography
-          as="a"
-          href="/"
-          className="mr-4 cursor-pointer py-1.5 font-semibold tracking-tight"
-        >
-          Adán Sánchez
-        </Typography>
+        <Link to="/">
+          <Typography className="mr-4 cursor-pointer py-1.5 font-semibold tracking-tight">
+            Adán Sánchez
+          </Typography>
+        </Link>
         <div className="mr-4 hidden lg:block">{navList}</div>
         <div className="hidden lg:block">
           <div className="rounded-lg border border-[rgba(13,115,119,0.65)] bg-[rgba(50,50,50,0.35)] hover:border-[#14FFEC] transition">
