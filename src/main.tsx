@@ -6,11 +6,24 @@ import { ThemeProvider } from "@material-tailwind/react";
 import "./i18n.ts";
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 import { Theme } from "./themes/Theme.ts";
+import Layout from "./Layouts/Layout.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    Component: App,
+    Component: Layout,
+    children: [
+      {
+        index: true,
+        Component: App,
+      },
+      {
+        path: "/projects",
+        Component: () => {
+          return <h1>This is the projects page</h1>;
+        },
+      },
+    ],
   },
   {
     path: "*",
