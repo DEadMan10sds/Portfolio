@@ -7,6 +7,7 @@ import "./i18n.ts";
 import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 import { Theme } from "./themes/Theme.ts";
 import Layout from "./Layouts/Layout.tsx";
+import { Projects } from "./Pages/Projects.tsx";
 
 const router = createBrowserRouter([
   {
@@ -19,9 +20,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/projects",
-        Component: () => {
-          return <h1>This is the projects page</h1>;
-        },
+        Component: Projects,
       },
     ],
   },

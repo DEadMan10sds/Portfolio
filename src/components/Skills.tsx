@@ -58,12 +58,12 @@ export const TabsContent = ({
 };
 
 export function Skills() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   const skillSet = useMemo(() => {
     const obj = t("skillsSet", { returnObjects: true }) as SkillSet;
     return obj && typeof obj === "object" ? obj : {};
-  }, [i18n.language, t]);
+  }, [t]);
 
   const ids = useMemo(() => Object.keys(skillSet), [skillSet]);
 
