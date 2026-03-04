@@ -33,7 +33,10 @@ export function StickyNavbar() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
-      <Typography as="li" className="p-1 font-normal">
+      <Typography
+        as="li"
+        className="p-1 font-normal transition hover:text-white"
+      >
         <Link
           to="/projects"
           className="flex items-center text-md font-semibold"
@@ -42,7 +45,11 @@ export function StickyNavbar() {
         </Link>
       </Typography>
       {links.map((link) => (
-        <Typography key={link.url} as="li" className="p-1 font-normal">
+        <Typography
+          key={link.url}
+          as="li"
+          className="p-1 font-normal transition hover:text-white"
+        >
           <a
             href={link.url}
             className="flex items-center text-md font-semibold"
@@ -51,7 +58,10 @@ export function StickyNavbar() {
           </a>
         </Typography>
       ))}
-      <Typography as="li" className="p-1 font-normal">
+      <Typography
+        as="li"
+        className="p-1 font-normal transition hover:text-white"
+      >
         <a
           href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
           className="flex items-center text-md font-semibold"
@@ -72,7 +82,7 @@ export function StickyNavbar() {
     >
       <div className="flex items-center justify-between">
         <Link to="/">
-          <Typography className="mr-4 cursor-pointer py-1.5 font-semibold tracking-tight">
+          <Typography className="mr-4 cursor-pointer py-1.5 font-semibold tracking-tight transition hover:text-white">
             Adán Sánchez
           </Typography>
         </Link>
