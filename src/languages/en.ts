@@ -90,17 +90,17 @@ const enTranslation = {
         {
           img: "docker.svg",
           title: "Docker",
-          time: "1 year",
+          time: "2 years",
         },
         {
           img: "react.svg",
           title: "React",
-          time: "2 years",
+          time: "4 years",
         },
         {
           img: "node.svg",
           title: "NodeJs",
-          time: "3 years",
+          time: "5 years",
         },
         {
           img: "laravel.svg",
@@ -115,29 +115,29 @@ const enTranslation = {
         {
           img: "express.svg",
           title: "ExpressJs",
-          time: "3 years",
+          time: "5 years",
         },
         {
           img: "nginx.svg",
           title: "Nginx",
-          time: "1/2 year",
+          time: "1 year",
         },
       ],
       languages: [
         {
           img: "html.svg",
           title: "HTML5",
-          time: "4 years",
+          time: "5 years",
         },
         {
           img: "javascript.svg",
           title: "JavaScript",
-          time: "4 years",
+          time: "5 years",
         },
         {
           img: "typescript.svg",
           title: "TypeScript",
-          time: "1 year",
+          time: "2 year",
         },
         {
           img: "c.svg",
@@ -198,12 +198,6 @@ const enTranslation = {
             "This is a simple guide to renew your SSL/TLS when Certbot has the error of timeout fetching the token on your site, this guide is oriented to people with little experience in server management and SSL/TLS certificates, so it is explained step by step with simple language.",
           url: "https://github.com/DEadMan10sds/CertbotSSLRenovationFail",
           img: "CertbotError.png",
-          tags: ["Guide", "SSL"],
-        },
-        {
-          title: "SSL error guide for certbot renovation fail",
-          description:
-            "This is a simple guide to renew your SSL/TLS when Certbot has the error of timeout fetching the token on your site, this guide is oriented to people with little experience in server management and SSL/TLS certificates, so it is explained step by step with simple language.",
           tags: ["Guide", "SSL"],
         },
       ],

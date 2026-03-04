@@ -47,7 +47,7 @@ function ProjectCard({ project }: { project: ProjectArguments }) {
   return (
     <Card className="rounded-2xl mt-12 bg-[rgba(33,33,33,0.38)] backdrop-blur-xl border border-[rgba(13,115,119,0.22)] shadow-[0_18px_50px_rgba(0,0,0,0.45)] flex flex-col">
       <CardHeader
-        className={`mx-auto w-full h-40 ${project.img ? "" : "hidden md:flex bg-gray-700 items-center justify-center"}`}
+        className={`mx-auto w-full h-40 ${project.img ? "" : "hidden md:flex bg-[#161515] items-center justify-center"}`}
       >
         <img
           src={project.img ?? "logo.png"}

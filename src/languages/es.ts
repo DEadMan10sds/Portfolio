@@ -90,17 +90,17 @@ const esTranslation = {
         {
           img: "docker.svg",
           title: "Docker",
-          time: "1 año",
+          time: "2 años",
         },
         {
           img: "react.svg",
           title: "React",
-          time: "2 años",
+          time: "4 años",
         },
         {
           img: "node.svg",
           title: "NodeJs",
-          time: "3 años",
+          time: "5 años",
         },
         {
           img: "laravel.svg",
@@ -115,29 +115,29 @@ const esTranslation = {
         {
           img: "express.svg",
           title: "ExpressJs",
-          time: "3 años",
+          time: "5 años",
         },
         {
           img: "nginx.svg",
           title: "Nginx",
-          time: "1/2 año",
+          time: "1 año",
         },
       ],
       languages: [
         {
           img: "html.svg",
           title: "HTML5",
-          time: "4 años",
+          time: "5 años",
         },
         {
           img: "javascript.svg",
           title: "JavaScript",
-          time: "4 años",
+          time: "5 años",
         },
         {
           img: "typescript.svg",
           title: "TypeScript",
-          time: "1 año",
+          time: "2 años",
         },
         {
           img: "c.svg",
@@ -194,14 +194,18 @@ const esTranslation = {
       header: "Proyectos",
       list: [
         {
-          title: "Guía de error SSL",
-          description: "Guía de renovación de SSL mediante certbot",
-          tags: ["Guide"],
+          title: "Guía de renovación de SSL para error de certbot",
+          description:
+            "Esta es una guía simple para renovar tu SSL/TLS cuando Certbot tiene el error de timeout al obtener el token en tu sitio, esta guía está orientada a personas con poca experiencia en gestión de servidores y certificados SSL/TLS, por lo que se explica paso a paso con lenguaje sencillo.",
+          url: "https://github.com/DEadMan10sds/CertbotSSLRenovationFail",
+          img: "CertbotError.png",
+          tags: ["Guide", "SSL"],
         },
       ],
       tags: {
         guide: "Guía",
         projects: "Proyecto",
+        ssl: "SSL",
       },
     },
   },
