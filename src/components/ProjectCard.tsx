@@ -2,6 +2,7 @@ import {
   Card,
   CardBody,
   CardFooter,
+  CardHeader,
   Chip,
   Typography,
 } from "@material-tailwind/react";
@@ -36,40 +37,42 @@ export type ProjectArguments = {
 function ProjectCard({ project }: { project: ProjectArguments }) {
   const { t } = useTranslation();
   return (
-    <>
-      <Card className="rounded-2xl bg-[rgba(33,33,33,0.38)] backdrop-blur-xl border border-[rgba(13,115,119,0.22)] shadow-[0_18px_50px_rgba(0,0,0,0.45)]">
-        <CardBody className="flex h-full flex-col gap-4">
-          <div className="mt-auto">
-            <Typography variant="h5" className="text-white leading-tight">
-              {project.title}
+    <Card className="rounded-2xl mt-12 bg-[rgba(33,33,33,0.38)] backdrop-blur-xl border border-[rgba(13,115,119,0.22)] shadow-[0_18px_50px_rgba(0,0,0,0.45)]">
+      <CardHeader>
+        <img src="CertbotError.png" alt="imgdeprueba" />
+      </CardHeader>
+      <CardBody className="flex h-full flex-col gap-4">
+        <div className="mt-auto">
+          <Typography variant="h5" className="text-white leading-tight">
+            {project.title}
+          </Typography>
+          <div className="mt-2 flex items-center gap-2 text-white/65">
+            <Typography variant="small" className="text-white/60">
+              {project.description}
             </Typography>
-            <div className="mt-2 flex items-center gap-2 text-white/65">
-              <Typography variant="small" className="text-white/60">
-                {project.description}
-              </Typography>
-            </div>
           </div>
-        </CardBody>
-        {/* //TODO: Optimize to avoid '0' when used just '&&' */}
-        {project.tags.length ? (
-          <CardFooter>
-            {project.tags.map((tag: string) => {
-              //TODO: Fix types of tags structure
-              const tagSelected = tagsDictionary[tag];
-              return (
-                <Chip
-                  className="w-fit rounded-full"
-                  color={tagSelected.color}
-                  value={t(tagSelected.text)}
-                />
-              );
-            })}
-          </CardFooter>
-        ) : (
-          <></>
-        )}
-      </Card>
-    </>
+        </div>
+      </CardBody>
+      {/* //TODO: Optimize to avoid '0' when used just '&&' */}
+      {project.tags.length ? (
+        <CardFooter>
+          {project.tags.map((tag: string, index: number) => {
+            //TODO: Fix types of tags structure
+            const tagSelected = tagsDictionary[tag];
+            return (
+              <Chip
+                key={`${project.title}-tag-${index}`}
+                className="w-fit rounded-full"
+                color={tagSelected.color}
+                value={t(tagSelected.text)}
+              />
+            );
+          })}
+        </CardFooter>
+      ) : (
+        <></>
+      )}
+    </Card>
   );
 }
 

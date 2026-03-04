@@ -11,8 +11,8 @@ export const Projects = () => {
 
   return (
     <>
-      {projectsList.map((project) => (
-        <ProjectCard key={project.title} project={project} />
+      {projectsList.map((project, index) => (
+        <ProjectCard key={`${project.title}-${index}`} project={project} />
       ))}
     </>
   );
