@@ -200,6 +200,12 @@ const enTranslation = {
           img: "CertbotError.png",
           tags: ["Guide", "SSL"],
         },
+        {
+          title: "SSL error guide for certbot renovation fail",
+          description:
+            "This is a simple guide to renew your SSL/TLS when Certbot has the error of timeout fetching the token on your site, this guide is oriented to people with little experience in server management and SSL/TLS certificates, so it is explained step by step with simple language.",
+          tags: ["Guide", "SSL"],
+        },
       ],
       header: "Projects",
       tags: {

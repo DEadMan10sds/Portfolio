@@ -10,10 +10,12 @@ export const Projects = () => {
   );
 
   return (
-    <>
+    <div
+      className={`${projectsList.length > 1 && "sm:grid grid-cols-2 gap-8"}`}
+    >
       {projectsList.map((project, index) => (
         <ProjectCard key={`${project.title}-${index}`} project={project} />
       ))}
-    </>
+    </div>
   );
 };

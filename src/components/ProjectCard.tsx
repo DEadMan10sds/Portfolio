@@ -45,34 +45,36 @@ export type ProjectArguments = {
 function ProjectCard({ project }: { project: ProjectArguments }) {
   const { t } = useTranslation();
   return (
-    <Card className="rounded-2xl mt-12 bg-[rgba(33,33,33,0.38)] backdrop-blur-xl border border-[rgba(13,115,119,0.22)] shadow-[0_18px_50px_rgba(0,0,0,0.45)]">
-      {project.img && (
-        <CardHeader className="w-fit mx-auto">
-          <img src={project.img} alt="imgdeprueba" />
-        </CardHeader>
-      )}
-      <CardBody className="flex h-full flex-col gap-4">
-        <div className="mt-auto">
+    <Card className="rounded-2xl mt-12 bg-[rgba(33,33,33,0.38)] backdrop-blur-xl border border-[rgba(13,115,119,0.22)] shadow-[0_18px_50px_rgba(0,0,0,0.45)] flex flex-col">
+      <CardHeader
+        className={`mx-auto w-full h-40 ${project.img ? "" : "hidden md:flex bg-gray-700 items-center justify-center"}`}
+      >
+        <img
+          src={project.img ?? "logo.png"}
+          alt={`${project.title}-image`}
+          className={`object-cover ${project.img ? "h-full" : "h-28"} `}
+        />
+      </CardHeader>
+
+      <CardBody className="flex flex-col gap-3 flex-grow">
+        <Typography
+          variant="h5"
+          className={`text-white leading-tight ${project.url ? "transition hover:text-cyan-600" : ""}`}
+        >
           {project.url ? (
-            <Typography
-              variant="h5"
-              className="text-white leading-tight transition hover:text-cyan-600"
-            >
-              <Link to={project.url} className="flex gap-1 items-baseline">
-                {project.title}
-                <ArrowTopRightOnSquareIcon className="h-5 w-5 flex-shrink-0" />
-              </Link>
-            </Typography>
-          ) : (
-            <Typography variant="h5" className="text-white leading-tight">
+            <Link to={project.url} className="flex gap-1 items-baseline">
               {project.title}
-            </Typography>
+              <ArrowTopRightOnSquareIcon className="h-5 w-5 flex-shrink-0" />
+            </Link>
+          ) : (
+            project.title
           )}
-          <div className="mt-2 flex items-center gap-2 text-white/65">
-            <Typography variant="small" className="text-white/60">
-              {project.description}
-            </Typography>
-          </div>
+        </Typography>
+
+        <div className="flex items-center gap-2 text-white/65">
+          <Typography variant="small" className="text-white/60">
+            {project.description}
+          </Typography>
         </div>
       </CardBody>
       {/* //TODO: Optimize to avoid '0' when used just '&&' */}
