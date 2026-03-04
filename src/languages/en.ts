@@ -190,6 +190,20 @@ const enTranslation = {
         },
       ],
     },
+    projects: {
+      list: [
+        {
+          title: "SSL error guide",
+          description: "SSL guide for certbot renovation fail",
+          tags: ["Guide"],
+        },
+      ],
+      header: "Projects",
+      tags: {
+        guide: "Guide",
+        projects: "Projects",
+      },
+    },
   },
 };
 

@@ -5,7 +5,6 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-//import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import { clsx } from "clsx";
@@ -24,8 +23,7 @@ const links = [
 
 export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
-  const { i18n } = useTranslation();
-  console.log(i18n.language);
+  const { i18n, t } = useTranslation();
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -35,6 +33,14 @@ export function StickyNavbar() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Typography as="li" className="p-1 font-normal">
+        <Link
+          to="/projects"
+          className="flex items-center text-md font-semibold"
+        >
+          {t("projects.header")}
+        </Link>
+      </Typography>
       {links.map((link) => (
         <Typography key={link.url} as="li" className="p-1 font-normal">
           <a
@@ -52,14 +58,6 @@ export function StickyNavbar() {
         >
           CV
         </a>
-      </Typography>
-      <Typography as="li" className="p-1 font-normal">
-        <Link
-          to="/projects"
-          className="flex items-center text-md font-semibold"
-        >
-          Projects
-        </Link>
       </Typography>
     </ul>
   );

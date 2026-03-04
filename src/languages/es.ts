@@ -190,6 +190,20 @@ const esTranslation = {
         },
       ],
     },
+    projects: {
+      header: "Proyectos",
+      list: [
+        {
+          title: "Guía de error SSL",
+          description: "Guía de renovación de SSL mediante certbot",
+          tags: ["Guide"],
+        },
+      ],
+      tags: {
+        guide: "Guía",
+        projects: "Proyecto",
+      },
+    },
   },
 };
 
