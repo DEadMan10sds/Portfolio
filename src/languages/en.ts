@@ -10,7 +10,7 @@ const enTranslation = {
       career: "Intelligent Systems Engineeer",
       university: "UASLP",
       description:
-        "Software developer focused on backend and system architecture, with experience building scalable, secure and business-oriented applications. Work primarily with Node.js and NestJS, designing APIs, data flows and systems that prioritize maintainability, performance and technical clarity. Tengo hands-on experience in deployment and infrastructure, managing Docker and CI/CD environments, allowing me to close the full cycle from development to production.",
+        "Software developer focused on backend and system architecture, with experience building scalable, secure and business-oriented applications. Work primarily with Node.js and NestJS, designing APIs, data flows and systems that prioritize maintainability, performance and technical clarity. I have hands-on experience in deployment and infrastructure, managing Docker and CI/CD environments, allowing me to close the full cycle from development to production.",
     },
     job_history: "Job History",
     jobs: {
@@ -26,6 +26,9 @@ const enTranslation = {
           "Automation of deployments and standardization of environments with Docker and CI/CD.",
           "Virtualized infrastructure management for system deployment and monitoring.",
           "Network infrastructure monitoring and user support.",
+          "Proxmox & Kubernetes Cluster deployment & management",
+          "Microsoft Office 365 administration",
+          "Solar panel installations",
         ],
       },
       "Cooperative Computing": {
@@ -200,12 +203,45 @@ const enTranslation = {
           img: "CertbotError.png",
           tags: ["Guide", "SSL"],
         },
+        {
+          title: "Production Line Traceability Web Application",
+          description:
+            "A system that handles the history of assembled parts in a production line, generates serial numbers and labels, keeps track of the history and process of each part, ensures its flow, and verifies its process.",
+          tags: ["Project", "Frontend", "Backend"],
+          list: ["Websockets to comunicate events", "Python file observer"],
+          badges: ["react", "javascript", "express", "mongodb"],
+        },
+        {
+          title: "Project Budget Controller",
+          description:
+            "A platform that allows the company to keep track of the items bought for a single project, where they where bought, their cost, the amount allocated and the remaining funds, the bought stage (wether it's pending to buy or it has been already delivered).",
+          tags: ["Project"],
+          list: [
+            "Transactions on database",
+            "State pattern for product delivery",
+          ],
+          badges: ["react", "typescript", "nestjs", "redux", "postgres"],
+        },
+        {
+          title: "Suppliers Access Control & Hospital Certificates manager",
+          description:
+            "A platform that allows the company to keep track of the items bought for a single project, where they where bought, their cost, the amount allocated and the remaining funds, the bought stage (wether it's pending to buy or it has been already delivered).",
+          tags: ["Project", "Frontend", "Backend", "Support"],
+          list: [
+            "Transactions on database",
+            "State pattern for product delivery",
+          ],
+          badges: ["react", "javascript", "express", "mongodb"],
+        },
       ],
       header: "Projects",
       tags: {
         guide: "Guide",
-        projects: "Projects",
+        projects: "Project",
         ssl: "SSL",
+        backend: "Backend",
+        frontend: "Frontend",
+        support: "Support",
       },
     },
   },

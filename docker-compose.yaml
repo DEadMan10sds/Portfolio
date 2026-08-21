@@ -4,8 +4,14 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "5173:80"
     stdin_open: true
     tty: true
     restart: always
+    networks:
+      - homelab_default
+
+
+
+networks:
+  homelab_default:
+    external: true
