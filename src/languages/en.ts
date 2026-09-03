@@ -1,98 +1,122 @@
 const enTranslation = {
   translation: {
     home: "Home",
+
     languages: {
       title: "Language",
       es: "Spanish",
       en: "English",
     },
+
     mainInfo: {
-      career: "Intelligent Systems Engineeer",
+      career: "Backend & Infrastructure Engineer",
       university: "UASLP",
       description:
-        "Software developer focused on backend and system architecture, with experience building scalable, secure and business-oriented applications. Work primarily with Node.js and NestJS, designing APIs, data flows and systems that prioritize maintainability, performance and technical clarity. I have hands-on experience in deployment and infrastructure, managing Docker and CI/CD environments, allowing me to close the full cycle from development to production.",
+        "Backend & Infrastructure Engineer experienced in designing, developing, and operating production software platforms. Former Backend Lead with experience building scalable backend architectures, APIs, business-oriented applications, and highly available infrastructure. Currently focused on modernizing legacy environments through Docker, Kubernetes, Talos Linux, Proxmox, and LINSTOR/DRBD, covering the full lifecycle from software architecture and development to deployment and production operations.",
     },
-    job_history: "Job History",
+
+    job_history: "Professional Experience",
+
     jobs: {
       "Bitcat Services": {
         description:
-          "Development of web systems for industry 4.0 environments, integrating software with physical infrastructure and system maintenance in production.",
-        title: "Javascript Web Developer",
-        start: "March 2024",
-        end: "Current day",
+          "Software and infrastructure engineering focused on backend systems, highly available infrastructure, automation, industrial integrations, and production operations.",
+        title: "Software & Infrastructure Engineer",
+        start: "May 2024",
+        end: "Present",
         activities: [
-          "Design and development of FullStack systems oriented to budgets, projects and monitoring.",
-          "Integration of internal APIs with external services and industrial hardware (PLC).",
-          "Automation of deployments and standardization of environments with Docker and CI/CD.",
-          "Virtualized infrastructure management for system deployment and monitoring.",
-          "Network infrastructure monitoring and user support.",
-          "Proxmox & Kubernetes Cluster deployment & management",
-          "Microsoft Office 365 administration",
-          "Solar panel installations",
+          "Designed and deployed server infrastructure, including physical installation, cabling, network configuration, switching, virtualization, storage, and high availability.",
+          "Managed highly available Proxmox clusters hosting production applications and databases, using LINSTOR-backed replicated storage to minimize downtime and VM migration times.",
+          "Administered Kubernetes clusters running on Talos Linux, managing application deployments, highly available workloads, persistent storage, and production infrastructure.",
+          "Implemented Cloudflare Tunnels to securely expose web services to the Internet without requiring static public IP addresses or direct inbound port exposure.",
+          "Implemented CI/CD pipelines using GitHub Actions and Docker, reducing build-related errors and deployment times by approximately 80%.",
+          "Dockerized legacy applications and standardized development environments, reducing environment-related errors by approximately 50%.",
+          "Built a full-stack project budgeting platform integrating internal services with the CROL API, reducing material-request lead time by approximately 40% and improving real-time budget visibility.",
+          "Led the development of an internal quotation management platform, eliminating licensing costs associated with the previous proprietary solution.",
+          "Integrated web systems with PLCs and industrial network infrastructure for maintenance, monitoring, and Industry 4.0 environments.",
         ],
       },
+
       "Cooperative Computing": {
         description:
-          "Web developer for external clients ensuring a correct user experience, also implementing code formating standars.",
-        title: "Fullstack developer",
+          "Full-stack development for client applications, focused on user interfaces, frontend implementation, and repository automation.",
+        title: "Full Stack Intern",
         start: "September 2023",
-        end: "March 2024",
+        end: "May 2024",
         activities: [
-          "Development of user interfaces in figma, implementing flows and making pre-coding demonstrations.",
-          "Configuring Triggers on github to standardize the code format according to pre-set rules.",
-          "Frontend development using react following previously developed interfaces and user experiences.",
+          "Developed user interfaces for proprietary applications, improving usability and user experience.",
+          "Implemented GitHub-based automation for code formatting and repository-specific coding standards.",
+          "Developed frontend features based on previously designed interfaces and application workflows.",
         ],
       },
+
       "AIA Partners": {
         description:
-          "Leader of a finance-focused backend development, using nodeJs and MongoDB, ensuring correct financial data calculation for users and administrators.",
-        title: "Backend development leader",
+          "Backend leadership for a fintech platform using Node.js, Express, and MongoDB, focused on architecture, performance, automation, security, and team development.",
+        title: "Backend Lead Developer",
         start: "June 2022",
         end: "September 2023",
         activities: [
-          "Deployment of automated backend systems to reduce wait times and manual configurations.",
-          "Maintenance of databases and Replica Sets, ensuring data availability.",
-          "Encryption of files in Databases and external image storage to optimize the load times of the frontend",
-          "Development of documentation and staff guidance for system maintenance and upgrades.",
+          "Designed and implemented the backend architecture for a fintech platform using Node.js and Express, reducing API response times by approximately 30% and application errors by approximately 40%.",
+          "Implemented MongoDB replica sets to improve database availability, redundancy, and fault tolerance.",
+          "Implemented scheduled jobs to automate backend workflows and recurring business processes.",
+          "Implemented encryption and secure file-storage mechanisms for sensitive information.",
+          "Provided technical support and training to users and administrators.",
+          "Led and mentored the development team, coordinating responsibilities and technical training to accelerate product delivery.",
         ],
       },
+
       "Pixel & Byte": {
         description:
-          "Development of a DCOM image converter to JSON files for AI training.",
+          "Development of tools for processing medical imaging data used in AI training workflows.",
         title: "Social Service",
         start: "June 2022",
-        end: "September 2023",
+        end: "December 2022",
         activities: [
-          "Conversion of DCOM image buffers to JSON format without data loss.",
-          "NodeJs Server capable of running Python scripts.",
-          "Python scripts for handling large amounts of information.",
+          "Developed a lossless DICOM-to-JSON converter to support medical imaging datasets used for AI training and early disease detection.",
+          "Developed a Node.js server capable of executing Python processing scripts.",
+          "Implemented Python-based processing workflows for handling large medical imaging datasets.",
         ],
       },
+
       UPSLP: {
         description:
-          "'Brand Wars' development for 'Lag Week 2022' with 'RPG Maker'",
-        title: "Freelance development",
-        start: "June 2022",
-        end: "September 2023",
+          "Development of Brand Wars, an educational video game created for Semana LAG 2022 using JavaScript and RPG Maker.",
+        title: "Freelance Video Game Developer",
+        start: "November 2021",
+        end: "March 2022",
         activities: [
-          "Development of functionalities in Javascript for handling user interface and interactions with the environment.",
-          "User tests for the correct functioning of the video game, ensuring that it is entertaining and digestible.",
-          "Implementation of scores based on users' knowledge and performance",
+          "Developed an educational video game using JavaScript and RPG Maker to teach marketing concepts during Semana LAG 2022.",
+          "Implemented custom user-interface interactions and gameplay functionality using JavaScript.",
+          "Performed user testing to validate gameplay, usability, and overall user experience.",
         ],
       },
     },
+
     skills: "Skills",
+
     skillsTabs: {
-      languages: "Programming languages",
-      frameworks: "Frameworks & libraries",
+      languages: "Programming Languages",
+      frameworks: "Frameworks & Technologies",
       databases: "Databases",
-      tools: "Tools",
+      tools: "Infrastructure & Tools",
     },
+
     skillsSet: {
       frameworks: [
         {
-          img: "docker.svg",
-          title: "Docker",
+          img: "node.svg",
+          title: "Node.js",
+          time: "5 years",
+        },
+        {
+          img: "express.svg",
+          title: "Express",
+          time: "5 years",
+        },
+        {
+          img: "nest.svg",
+          title: "NestJS",
           time: "2 years",
         },
         {
@@ -101,37 +125,23 @@ const enTranslation = {
           time: "4 years",
         },
         {
-          img: "node.svg",
-          title: "NodeJs",
-          time: "5 years",
-        },
-        {
           img: "laravel.svg",
           title: "Laravel",
           time: "1 year",
         },
         {
-          img: "nest.svg",
-          title: "NestJs",
-          time: "1 year",
-        },
-        {
-          img: "express.svg",
-          title: "ExpressJs",
-          time: "5 years",
+          img: "docker.svg",
+          title: "Docker",
+          time: "2+ years",
         },
         {
           img: "nginx.svg",
           title: "Nginx",
-          time: "1 year",
+          time: "2+ years",
         },
       ],
+
       languages: [
-        {
-          img: "html.svg",
-          title: "HTML5",
-          time: "5 years",
-        },
         {
           img: "javascript.svg",
           title: "JavaScript",
@@ -140,101 +150,132 @@ const enTranslation = {
         {
           img: "typescript.svg",
           title: "TypeScript",
-          time: "2 year",
+          time: "3+ years",
         },
         {
-          img: "c.svg",
-          title: "C",
-          time: "3 years",
+          img: "html.svg",
+          title: "HTML5",
+          time: "5 years",
         },
         {
           img: "php.svg",
           title: "PHP",
           time: "1 year",
         },
+        {
+          img: "c.svg",
+          title: "C",
+          time: "3 years",
+        },
       ],
+
       databases: [
         {
           img: "mongod.svg",
-          title: "Mongo",
-          time: "3 years",
+          title: "MongoDB",
+          time: "4+ years",
         },
         {
           img: "postgre.svg",
           title: "PostgreSQL",
-          time: "1 year",
+          time: "2+ years",
         },
       ],
+
       tools: [
+        {
+          img: "proxmox.svg",
+          title: "Proxmox VE",
+          time: "2+ years",
+        },
+        {
+          img: "kubernetes.svg",
+          title: "Kubernetes",
+          time: "1+ year",
+        },
+        {
+          img: "talos.svg",
+          title: "Talos Linux",
+          time: "1+ year",
+        },
+        {
+          img: "git.svg",
+          title: "Git",
+          time: "5 years",
+        },
+        {
+          img: "github.svg",
+          title: "GitHub",
+          time: "5 years",
+        },
         {
           img: "postman.svg",
           title: "Postman",
-          time: "3 years",
+          time: "4+ years",
         },
         {
           img: "figma.svg",
           title: "Figma",
           time: "3 years",
         },
-        {
-          img: "git.svg",
-          title: "Git",
-          time: "4 years",
-        },
-        {
-          img: "github.svg",
-          title: "Github",
-          time: "4 years",
-        },
-        {
-          img: "proxmox.svg",
-          title: "Proxmox",
-          time: "1 year",
-        },
       ],
     },
+
     projects: {
+      header: "Projects",
+
       list: [
         {
-          title: "SSL error guide for certbot renovation fail",
+          title: "Certbot SSL/TLS Renewal Troubleshooting Guide",
           description:
-            "This is a simple guide to renew your SSL/TLS when Certbot has the error of timeout fetching the token on your site, this guide is oriented to people with little experience in server management and SSL/TLS certificates, so it is explained step by step with simple language.",
+            "A step-by-step troubleshooting guide for SSL/TLS certificate renewal failures caused by Certbot HTTP challenge timeouts. Written for users with limited experience in server administration and TLS certificate management.",
           url: "https://github.com/DEadMan10sds/CertbotSSLRenovationFail",
           img: "CertbotError.png",
           tags: ["Guide", "SSL"],
         },
+
         {
-          title: "Production Line Traceability Web Application",
+          title: "Production Line Traceability Platform",
           description:
-            "A system that handles the history of assembled parts in a production line, generates serial numbers and labels, keeps track of the history and process of each part, ensures its flow, and verifies its process.",
+            "A production traceability system that records the lifecycle of assembled parts, generates serial numbers and labels, tracks each manufacturing stage, and validates the expected production workflow.",
           tags: ["Project", "Frontend", "Backend"],
-          list: ["Websockets to comunicate events", "Python file observer"],
+          list: [
+            "WebSocket-based real-time event communication",
+            "Python-based file monitoring",
+            "Production process traceability",
+            "Serial number and label generation",
+          ],
           badges: ["react", "javascript", "express", "mongodb"],
         },
+
         {
-          title: "Project Budget Controller",
+          title: "Project Budget Management Platform",
           description:
-            "A platform that allows the company to keep track of the items bought for a single project, where they where bought, their cost, the amount allocated and the remaining funds, the bought stage (wether it's pending to buy or it has been already delivered).",
-          tags: ["Project"],
+            "A project budgeting platform that tracks allocated funds, purchases, suppliers, costs, remaining budget, and procurement status while providing real-time visibility into project expenses.",
+          tags: ["Project", "Frontend", "Backend"],
           list: [
-            "Transactions on database",
-            "State pattern for product delivery",
+            "Transactional database operations",
+            "State Pattern for procurement workflows",
+            "Budget and expense tracking",
+            "External and internal API integrations",
           ],
           badges: ["react", "typescript", "nestjs", "redux", "postgres"],
         },
+
         {
-          title: "Suppliers Access Control & Hospital Certificates manager",
+          title: "Supplier Access Control & Hospital Certificate Management",
           description:
-            "A platform that allows the company to keep track of the items bought for a single project, where they where bought, their cost, the amount allocated and the remaining funds, the bought stage (wether it's pending to buy or it has been already delivered).",
+            "A web platform for managing supplier access and administrative certificate workflows in hospital environments.",
           tags: ["Project", "Frontend", "Backend", "Support"],
           list: [
-            "Transactions on database",
-            "State pattern for product delivery",
+            "Supplier access management",
+            "Certificate management workflows",
+            "Administrative process tracking",
           ],
           badges: ["react", "javascript", "express", "mongodb"],
         },
       ],
-      header: "Projects",
+
       tags: {
         guide: "Guide",
         projects: "Project",
