@@ -109,8 +109,28 @@
   background-size: 200% 100%;
   animation: rainbow-move 10s linear infinite;
 
+  /* Desvanecimiento en ambos extremos */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 15%,
+    black 85%,
+    transparent 100%
+  );
+
+  /* Resplandor */
+  filter: saturate(50%) drop-shadow(0 0 3px rgba(160, 100, 255, 0.6))
+    drop-shadow(0 0 6px rgba(0, 200, 255, 0.25));
+
   pointer-events: none;
-  filter: saturate(50%);
 }
 
 @keyframes rainbow-move {
@@ -120,17 +140,5 @@
 
   to {
     background-position: 200% 50%;
-  }
-}
-
-@media (hover: none), (pointer: coarse) {
-  .custom-cursor,
-  .custom-cursor-dot,
-  .cursor-trail {
-    display: none !important;
-  }
-
-  body {
-    cursor: auto !important;
   }
 }
