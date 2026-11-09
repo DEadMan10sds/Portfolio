@@ -10,7 +10,7 @@ export const SkillCard = ({ skill }: { skill: Skill }) => {
   );
 
   const isExpress = ["express", "expressjs"].includes(normalizedTitle);
-
+  console.log(skill.img);
   return (
     <Card className="rounded-2xl bg-[rgba(33,33,33,0.38)] backdrop-blur-xl border border-[rgba(13,115,119,0.22)] shadow-[0_18px_50px_rgba(0,0,0,0.45)] overflow-hidden">
       <CardBody className="flex h-full flex-col gap-4">
@@ -18,9 +18,8 @@ export const SkillCard = ({ skill }: { skill: Skill }) => {
           <div className="absolute h-40 w-40 rounded-full bg-[rgba(13,115,119,0.18)] blur-2xl" />
 
           <img
-            src={skill.img}
+            src={"/" + skill.img}
             alt={`${skill.title}-logo`}
-            loading="lazy"
             className={[
               "relative z-10 max-h-28 max-w-[75%] object-contain opacity-90",
               "drop-shadow-[0_10px_22px_rgba(0,0,0,0.35)]",
