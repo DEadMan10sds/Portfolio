@@ -8,7 +8,6 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 import { Theme } from "./themes/Theme.ts";
 import Layout from "./Layouts/Layout.tsx";
 import { Projects } from "./Pages/Projects.tsx";
-import CanvasCursor from "./components/CanvasCursor.tsx";
 
 const router = createBrowserRouter([
   {
@@ -35,7 +34,6 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider value={Theme}>
       <RouterProvider router={router} />
-      <CanvasCursor />
     </ThemeProvider>
   </StrictMode>,
 );

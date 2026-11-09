@@ -37,8 +37,8 @@ export function StarfieldBackground({
       star.style.width = `${size}px`;
       star.style.height = `${size}px`;
       star.style.opacity = `${Math.random()}`;
-      star.style.top = `${Math.random() * 100}vh`;
-      star.style.left = `${Math.random() * 100}vw`;
+      star.style.top = `${Math.random() * 100}%`;
+      star.style.left = `${Math.random() * 100}%`;
     });
   }, [stars]);
 
@@ -50,7 +50,7 @@ export function StarfieldBackground({
       const tailLength = Math.floor(Math.random() * 200) + 60; // 60–260px
 
       return {
-        top: Math.random() * 100 + "vh",
+        top: Math.random() * 100 + "%",
         left: Math.random() * 100 + "%",
         animationDelay: Math.random() * 0.6 + 0.2 + "s",
         animationDuration: (Math.random() * (MAX - MIN) + MIN).toFixed(2) + "s",
@@ -71,7 +71,8 @@ export function StarfieldBackground({
     <div
       aria-hidden="true"
       className={clsx(
-        "pointer-events-none absolute inset-0 h-full w-full overflow-hidden",
+        "pointer-events-none absolute inset-0",
+        "min-h-full w-full overflow-hidden",
         "z-0",
         className,
       )}

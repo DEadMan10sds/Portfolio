@@ -136,9 +136,9 @@ const useCanvasCursor = () => {
     E = {
       debug: true,
       friction: 0.5,
-      trails: 20,
-      size: 15,
-      dampening: 0.25,
+      trails: 15,
+      size: 10,
+      dampening: 0.2,
       tension: 0.98,
     };
   function Node() {

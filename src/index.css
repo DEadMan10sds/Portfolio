@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --c1: #212121;
-  --c2: #323232;
-  --c3: #0d7377;
-  --c4: #14ffec;
+@layer base {
+  :root {
+    --c1: 33 33 33;
+    --c2: 50 50 50;
+    --c3: 13 115 119;
+    --c4: 20 255 236;
+  }
 }
 
 @layer components {
@@ -118,5 +120,17 @@
 
   to {
     background-position: 200% 50%;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor,
+  .custom-cursor-dot,
+  .cursor-trail {
+    display: none !important;
+  }
+
+  body {
+    cursor: auto !important;
   }
 }

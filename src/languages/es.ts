@@ -9,10 +9,46 @@ const esTranslation = {
     },
 
     mainInfo: {
-      career: "Ingeniero Backend e Infraestructura",
-      university: "UASLP",
+      career: "Ingeniero de Software",
+      tagline:
+        "Diseño, desarrollo y automatizo soluciones tecnológicas mediante software, infraestructura y arquitectura de sistemas.",
+
+      aboutTitle: "Sobre mí",
+      aboutSubtitle: "Un poco sobre mi enfoque profesional",
       description:
-        "Ingeniero Backend e Infraestructura con experiencia en el diseño, desarrollo y operación de plataformas de software en producción. Ex Backend Lead con experiencia en la construcción de arquitecturas backend escalables, APIs, aplicaciones orientadas al negocio e infraestructura de alta disponibilidad. Actualmente enfocado en la modernización de entornos legacy mediante Docker, Kubernetes, Talos Linux, Proxmox y LINSTOR/DRBD, cubriendo el ciclo completo desde la arquitectura y desarrollo de software hasta el despliegue y la operación en producción.",
+        "Soy ingeniero de software enfocado en el desarrollo backend y la infraestructura tecnológica. Me interesa construir soluciones robustas, escalables y mantenibles, combinando el desarrollo de aplicaciones con la automatización, la administración de sistemas y la orquestación de servicios. Trabajo principalmente con tecnologías como Node.js, NestJS, Docker, Kubernetes, Talos Linux y Proxmox.",
+
+      highlights: {
+        backend: "Desarrollo de aplicaciones y APIs",
+        devops: "Automatización y despliegue",
+        infrastructure: "Administración y arquitectura de sistemas",
+      },
+
+      specialtiesTitle: "Áreas de especialización",
+      specialtiesSubtitle:
+        "Tecnologías y disciplinas que forman parte de mi trabajo.",
+
+      specialties: {
+        backend: {
+          title: "Desarrollo Backend",
+          description:
+            "Diseño e implementación de APIs, servicios y aplicaciones backend, priorizando la organización del código, la mantenibilidad y el rendimiento.",
+        },
+        infrastructure: {
+          title: "Infraestructura y DevOps",
+          description:
+            "Implementación y administración de infraestructura, contenedores, clústeres Kubernetes y automatización de despliegues.",
+        },
+        architecture: {
+          title: "Arquitectura de Sistemas",
+          description:
+            "Diseño de soluciones integrales que conectan aplicaciones, bases de datos, servicios e infraestructura de forma confiable.",
+        },
+      },
+
+      technologiesTitle: "Tecnologías y herramientas",
+      technologiesSubtitle:
+        "Parte del ecosistema tecnológico con el que trabajo.",
     },
 
     job_history: "Experiencia profesional",
@@ -93,7 +129,7 @@ const esTranslation = {
       },
     },
 
-    skills: "Habilidades",
+    skills: "Tecnologías y Herramientas",
 
     skillsTabs: {
       languages: "Lenguajes de programación",
