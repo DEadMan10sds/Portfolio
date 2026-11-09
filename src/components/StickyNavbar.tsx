@@ -5,10 +5,10 @@ import {
   Typography,
   IconButton,
 } from "@material-tailwind/react";
-//import { useTranslation } from "react-i18next";
 import { ChangeLanguage } from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import { clsx } from "clsx";
+import { Link, NavLink } from "react-router";
 
 const links = [
   {
@@ -19,12 +19,15 @@ const links = [
     url: "https://github.com/DEadMan10sds",
     text: "Github",
   },
+  {
+    url: "mailTo:adan.sanchez@proton.me",
+    text: "Email",
+  },
 ];
 
 export function StickyNavbar() {
   const [openNav, setOpenNav] = useState(false);
-  const { i18n } = useTranslation();
-  console.log(i18n.language);
+  const { i18n, t } = useTranslation();
   useEffect(() => {
     window.addEventListener(
       "resize",
@@ -34,8 +37,27 @@ export function StickyNavbar() {
 
   const navList = (
     <ul className="mt-2 mb-4 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
+      <Typography
+        as="li"
+        className="p-1 font-normal transition hover:text-white rainbow-border"
+      >
+        <NavLink
+          to="/projects"
+          className={({ isActive }) =>
+            isActive
+              ? "flex items-center text-md font-bold text-white"
+              : "flex items-center text-md font-semibold"
+          }
+        >
+          {t("projects.header")}
+        </NavLink>
+      </Typography>
       {links.map((link) => (
-        <Typography key={link.url} as="li" className="p-1 font-normal">
+        <Typography
+          key={link.url}
+          as="li"
+          className="p-1 font-normal transition hover:text-white"
+        >
           <a
             href={link.url}
             className="flex items-center text-md font-semibold"
@@ -44,8 +66,12 @@ export function StickyNavbar() {
           </a>
         </Typography>
       ))}
-      <Typography as="li" className="p-1 font-normal">
+      <Typography
+        as="li"
+        className="p-1 font-normal transition hover:text-white"
+      >
         <a
+          //href={`CV_EN_-_AdanAlejandroSanchez`}
           href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
           className="flex items-center text-md font-semibold"
         >
@@ -64,13 +90,11 @@ export function StickyNavbar() {
       )}
     >
       <div className="flex items-center justify-between">
-        <Typography
-          as="a"
-          href="#"
-          className="mr-4 cursor-pointer py-1.5 font-semibold tracking-tight"
-        >
-          Adán Sánchez
-        </Typography>
+        <Link to="/">
+          <Typography className="mr-4 cursor-pointer py-1.5 font-semibold tracking-tight transition hover:text-white">
+            Adán Sánchez
+          </Typography>
+        </Link>
         <div className="mr-4 hidden lg:block">{navList}</div>
         <div className="hidden lg:block">
           <div className="rounded-lg border border-[rgba(13,115,119,0.65)] bg-[rgba(50,50,50,0.35)] hover:border-[#14FFEC] transition">

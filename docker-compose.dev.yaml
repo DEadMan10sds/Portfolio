@@ -4,11 +4,16 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.dev
-    ports:
-      - "5172:5173"
     volumes:
       - .:/app
       - /app/node_modules # Evita conflictos con node_modules locales
     environment:
       - CHOKIDAR_USEPOLLING=true # Importante para hot reload en Mac y Windows
     command: npm run dev
+    networks:
+      - homelab_default
+
+
+networks:
+  homelab_default:
+    external: true

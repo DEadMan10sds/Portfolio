@@ -1,5 +1,5 @@
 # Usamos una imagen base ligera con Node
-FROM node:23-alpine
+FROM node:latest
 
 # Directorio de trabajo dentro del contenedor
 WORKDIR /app
