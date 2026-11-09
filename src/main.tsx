@@ -1,6 +1,6 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
+import Home from "./Pages/Home.tsx";
 import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
 import "./i18n.ts";
@@ -8,6 +8,7 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router";
 import { Theme } from "./themes/Theme.ts";
 import Layout from "./Layouts/Layout.tsx";
 import { Projects } from "./Pages/Projects.tsx";
+import CanvasCursor from "./components/CanvasCursor.tsx";
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        Component: App,
+        Component: Home,
       },
       {
         path: "/projects",
@@ -34,6 +35,7 @@ createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <ThemeProvider value={Theme}>
       <RouterProvider router={router} />
+      <CanvasCursor />
     </ThemeProvider>
   </StrictMode>,
 );

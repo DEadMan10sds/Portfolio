@@ -8,7 +8,7 @@ import {
 import { ChangeLanguage } from "./ChangeLanguage";
 import { useTranslation } from "react-i18next";
 import { clsx } from "clsx";
-import { Link } from "react-router";
+import { Link, NavLink } from "react-router";
 
 const links = [
   {
@@ -41,12 +41,16 @@ export function StickyNavbar() {
         as="li"
         className="p-1 font-normal transition hover:text-white rainbow-border"
       >
-        <Link
+        <NavLink
           to="/projects"
-          className="flex items-center text-md font-semibold"
+          className={({ isActive }) =>
+            isActive
+              ? "flex items-center text-md font-bold text-white"
+              : "flex items-center text-md font-semibold"
+          }
         >
           {t("projects.header")}
-        </Link>
+        </NavLink>
       </Typography>
       {links.map((link) => (
         <Typography
@@ -67,6 +71,7 @@ export function StickyNavbar() {
         className="p-1 font-normal transition hover:text-white"
       >
         <a
+          //href={`CV_EN_-_AdanAlejandroSanchez`}
           href={`CV_${i18n.language.toUpperCase()}_-_AdanAlejandroSanchez.pdf`}
           className="flex items-center text-md font-semibold"
         >

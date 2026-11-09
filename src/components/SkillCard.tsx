@@ -16,7 +16,6 @@ export const SkillCard = ({ skill }: { skill: Skill }) => {
       <CardBody className="flex h-full flex-col gap-4">
         <div className="relative flex h-40 items-center justify-center">
           <div className="absolute h-40 w-40 rounded-full bg-[rgba(13,115,119,0.18)] blur-2xl" />
-
           <img
             src={"/" + skill.img}
             alt={`${skill.title}-logo`}
@@ -28,15 +27,12 @@ export const SkillCard = ({ skill }: { skill: Skill }) => {
             ].join(" ")}
           />
         </div>
-
         <div className="mt-auto">
           <Typography variant="h5" className="text-white leading-tight">
             {skill.title}
           </Typography>
-
           <div className="mt-2 flex items-center gap-2 text-white/65">
             <ClockIcon className="h-4 w-4 text-[#14FFEC]/80" />
-
             <Typography variant="small" className="text-white/60">
               {skill.time}
             </Typography>
